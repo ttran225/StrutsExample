@@ -25,6 +25,6 @@
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>ViewHelloWorld.do</welcome-file>
+  	<welcome-file>ViewSignUp.do</welcome-file>
   </welcome-file-list>
 </web-app>
