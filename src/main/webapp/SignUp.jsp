@@ -30,8 +30,7 @@
 				</div>
 			</div>
 			<div class="main-login main-center">
-				<form class="form-horizontal" method="post" action="#">
-
+				<form class="form-horizontal" method="post" action="SubmitSignUp.do">
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
@@ -44,50 +43,45 @@
 					</div>
 
 					<div class="form-group">
-						<label for="email" class="cols-sm-2 control-label">Your
-							Email</label>
+						<label for="email" class="cols-sm-2 control-label">Your Email</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<span class="input-group-addon"><i
-									class="fa fa-envelope fa" aria-hidden="true"></i></span> <input
-									type="text" class="form-control" name="email" id="email"
-									placeholder="Enter your Email" />
+								<span class="input-group-addon">
+									<i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" required/>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="username" class="cols-sm-2 control-label">Username</label>
+						<label for="username" class="cols-sm-2 control-label">Username</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-users fa"
-									aria-hidden="true"></i></span> <input type="text" class="form-control"
-									name="username" id="username" placeholder="Enter your Username" />
+								<span class="input-group-addon">
+									<i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control"	name="username" id="username" placeholder="Enter your Username" required/>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="password" class="cols-sm-2 control-label">Password</label>
+						<label for="password" class="cols-sm-2 control-label">Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<span class="input-group-addon"><i
-									class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
-									type="password" class="form-control" name="password"
-									id="password" placeholder="Enter your Password" />
+								<span class="input-group-addon">
+								<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+								<input type="password" class="form-control" name="password"	id="password" placeholder="Enter your Password" required/>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="confirm" class="cols-sm-2 control-label">Confirm
-							Password</label>
+						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
 							<div class="input-group">
-								<span class="input-group-addon"><i
-									class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
-									type="password" class="form-control" name="confirm"
-									id="confirm" placeholder="Confirm your Password" />
+								<span class="input-group-addon">
+									<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" required/>
 							</div>
 						</div>
 					</div>
