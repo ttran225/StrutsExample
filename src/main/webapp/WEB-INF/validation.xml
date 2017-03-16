@@ -5,6 +5,10 @@
 <form-validation>
    <formset>
       <form name="SignUpForm">
+   		 <field property="name" depends="required">
+		 	<msg name="required" key="err.user.name.required" />
+		 </field>
+      
          <field property="username" depends="required,maxlength,minlength,mask">
          	<msg name="required" key="err.user.username.required" />
 			<msg name="maxlength" key="err.user.username.length" />

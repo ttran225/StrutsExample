@@ -1,3 +1,6 @@
+<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +33,17 @@
 				</div>
 			</div>
 			<div class="main-login main-center">
-				<form class="form-horizontal" method="post" action="SubmitSignUp.do">
+				<html:form styleClass="form-horizontal" method="post" action="/SubmitSignUp.do">
+					<font color="red">
+						<html:errors/>
+					</font>
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
 							<div class="input-group">
 								<span class="input-group-addon">
-									<i class="fa fa-user fa" aria-hidden="true"></i></span> 
-									<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" required/>
+									<i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<html:text property="name" styleClass="form-control" styleId="name"></html:text>
 							</div>
 						</div>
 					</div>
@@ -48,7 +54,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" required/>
+									<html:text property="email" styleClass="form-control" styleId="email"></html:text>
 							</div>
 						</div>
 					</div>
@@ -59,7 +65,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control"	name="username" id="username" placeholder="Enter your Username" required/>
+									<html:text property="username" styleClass="form-control" style="username"></html:text>
 							</div>
 						</div>
 					</div>
@@ -70,7 +76,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">
 								<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-								<input type="password" class="form-control" name="password"	id="password" placeholder="Enter your Password" required/>
+								<html:password property="password" styleClass="form-control" styleId="password"></html:password>
 							</div>
 						</div>
 					</div>
@@ -81,19 +87,18 @@
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" required/>
+									<html:password property="password2" styleClass="form-control" styleId="password2"></html:password>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group ">
-						<button type="submit"
-							class="btn btn-primary btn-lg btn-block login-button">Register</button>
+						<html:submit styleClass="btn btn-primary btn-lg btn-block login-button">Register</html:submit>
 					</div>
 					<div class="login-register">
 						<a href="index.php">Login</a>
 					</div>
-				</form>
+				</html:form>
 			</div>
 		</div>
 	</div>
