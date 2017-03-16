@@ -13,7 +13,9 @@
     <init-param>
         <param-name>config</param-name>
         <param-value>
-         /WEB-INF/struts-config.xml
+         /helloworld/WEB-INF/struts-config.xml,
+         /validation/WEB-INF/struts-config.xml,
+         /tile/WEB-INF/struts-config.xml
         </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
@@ -25,6 +27,6 @@
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>ViewSignUp.do</welcome-file>
+  	<welcome-file>User.do</welcome-file>
   </welcome-file-list>
 </web-app>

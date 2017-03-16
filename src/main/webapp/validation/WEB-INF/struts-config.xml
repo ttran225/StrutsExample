@@ -6,35 +6,21 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="HelloWorldForm"
-			type="com.tutran.common.form.HelloWorldForm"/>
 		<form-bean name="SignUpForm"
 			type="com.tutran.common.form.SignUpForm"/>
 	</form-beans>
 
 	<action-mappings>
-		<action path="/ViewHelloWorld" 
-						type="com.tutran.common.action.HelloWorldAction" 
-						name="HelloWorldForm">
-			<forward name="success" path="/pages/HelloWorld.jsp"/>
-	   </action>
-	   
 		<action path="/ViewSignUp"
 						type="org.apache.struts.actions.ForwardAction"
-						parameter="/pages/SignUp.jsp"/>
+						parameter="/validation/pages/SignUp.jsp"/>
 			
 		<action path="/SubmitSignUp"
 						type="com.tutran.common.action.SubmitSignUpAction"
 						name="SignUpForm"
 						input="/ViewSignUp.do">
-			<forward name="success" path="/pages/HelloWorld.jsp"/>
+			<forward name="success" path="/helloworld/pages/HelloWorld.jsp"/>
 		</action>
-	
-		<action
-			path="/User"
-			type="org.apache.struts.actions.ForwardAction"
-			parameter="/pages/UserTile.jsp"/>
-			
 	</action-mappings>
 	
 	<message-resources
@@ -42,12 +28,7 @@
 	
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
 		<set-property property="pathnames"
-		value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+		value="/validation/WEB-INF/validator-rules.xml, /validation/WEB-INF/validation.xml"/>
 	</plug-in>
 	
-	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
-		<set-property property="definitions-config"
-		value="/WEB-INF/tiles.xml"/>
-	</plug-in>
-
 </struts-config>
