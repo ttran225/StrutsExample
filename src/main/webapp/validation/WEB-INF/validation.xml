@@ -4,7 +4,7 @@
 
 <form-validation>
    <formset>
-      <form name="SignUpForm">
+      <form name="ValidatorForm">
    		 <field property="name" depends="required">
 		 	<msg name="required" key="err.user.name.required" />
 		 </field>
@@ -56,7 +56,7 @@
          </field>
          
          <field property="password2" depends="validwhen">
-         	<msg name="validwhen" key="err.user.pwd2.notmatch" />
+         	<msg name="validwhen" key="err.user.password2.notmatch" />
 			<var>
 				<var-name>test</var-name>
 				<var-value>

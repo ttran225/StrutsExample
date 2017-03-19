@@ -7,12 +7,12 @@
 
 	<form-beans>
 		<form-bean name="HelloWorldForm"
-			type="com.tutran.common.form.HelloWorldForm"/>
+			type="com.tutran.common.form.helloworld.HelloWorldForm"/>
 	</form-beans>
 
 	<action-mappings>
 		<action path="/ViewHelloWorld" 
-						type="com.tutran.common.action.HelloWorldAction" 
+						type="com.tutran.common.action.helloworld.HelloWorldAction" 
 						name="HelloWorldForm">
 			<forward name="success" path="/helloworld/pages/HelloWorld.jsp"/>
 	   </action>

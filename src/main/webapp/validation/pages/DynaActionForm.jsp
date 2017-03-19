@@ -33,17 +33,19 @@
 				</div>
 			</div>
 			<div class="main-login main-center">
-				<html:form styleClass="form-horizontal" method="post" action="/SubmitSignUp.do">
-					<font color="red">
-						<html:errors/>
-					</font>
+				<form class="form-horizontal" method="post" action="SubmitDynaActionForm.do">
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<html:messages id="err_name" property="common.name.err">
+								<div style="color:red">
+									<bean:write name="err_name" />
+								</div>
+							</html:messages>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<html:text property="name" styleClass="form-control" styleId="name"></html:text>
+									<input type="text" id="name" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -51,10 +53,15 @@
 					<div class="form-group">
 						<label for="email" class="cols-sm-2 control-label">Your Email</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<html:messages id="err_email" property="common.email.err">
+								<div style="color:red">
+									<bean:write name="err_email" />
+								</div>
+							</html:messages>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<html:text property="email" styleClass="form-control" styleId="email"></html:text>
+									<input type="email" name="email" id="email" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -62,10 +69,15 @@
 					<div class="form-group">
 						<label for="username" class="cols-sm-2 control-label">Username</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<html:messages id="err_username" property="common.username.err">
+								<div style="color:red">
+									<bean:write name="err_username" />
+								</div>
+							</html:messages>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<html:text property="username" styleClass="form-control" style="username"></html:text>
+									<input type="text" name="username" id="username" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -73,10 +85,15 @@
 					<div class="form-group">
 						<label for="password" class="cols-sm-2 control-label">Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<html:messages id="err_password" property="common.password.err">
+								<div style="color:red">
+									<bean:write name="err_password" />
+								</div>
+							</html:messages>
 							<div class="input-group">
 								<span class="input-group-addon">
 								<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-								<html:password property="password" styleClass="form-control" styleId="password"></html:password>
+								<input type="password" name="password" id="password" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -84,10 +101,15 @@
 					<div class="form-group">
 						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<html:messages id="err_password2" property="common.password2.err">
+								<div style="color:red">
+									<bean:write name="err_password2" />
+								</div>
+							</html:messages>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<html:password property="password2" styleClass="form-control" styleId="password2"></html:password>
+									<input type="password" name="password2" id="password2" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -98,7 +120,7 @@
 					<div class="login-register">
 						<a href="index.php">Login</a>
 					</div>
-				</html:form>
+				</form>
 			</div>
 		</div>
 	</div>

@@ -27,6 +27,6 @@
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>User.do</welcome-file>
+  	<welcome-file>ViewValidatorForm.do</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -1,4 +1,4 @@
-package com.tutran.common.form;
+package com.tutran.common.form.helloworld;
 
 import org.apache.struts.action.ActionForm;
 

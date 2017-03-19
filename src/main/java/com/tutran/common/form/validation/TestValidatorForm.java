@@ -1,8 +1,8 @@
-package com.tutran.common.form;
+package com.tutran.common.form.validation;
 
 import org.apache.struts.validator.ValidatorForm;
 
-public class SignUpForm extends ValidatorForm {
+public class TestValidatorForm extends ValidatorForm {
 	
 	private String name;
 	private String email;

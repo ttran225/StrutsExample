@@ -6,20 +6,41 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="SignUpForm"
-			type="com.tutran.common.form.SignUpForm"/>
+		<form-bean name="ValidatorForm"
+			type="com.tutran.common.form.validation.TestValidatorForm"/>
+			
+		<form-bean name="DynaActionForm"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="name" type="java.lang.String"></form-property>
+			<form-property name="email" type="java.lang.String"></form-property>
+			<form-property name="username" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+			<form-property name="password2" type="java.lang.String"></form-property>
+		</form-bean>
 	</form-beans>
 
 	<action-mappings>
-		<action path="/ViewSignUp"
+		<action path="/ViewValidatorForm"
 						type="org.apache.struts.actions.ForwardAction"
-						parameter="/validation/pages/SignUp.jsp"/>
+						parameter="/validation/pages/ValidatorForm.jsp"/>
 			
-		<action path="/SubmitSignUp"
-						type="com.tutran.common.action.SubmitSignUpAction"
-						name="SignUpForm"
-						input="/ViewSignUp.do">
-			<forward name="success" path="/helloworld/pages/HelloWorld.jsp"/>
+		<action path="/SubmitValidatorForm"
+						type="com.tutran.common.action.validation.SubmitValidatorFormAction"
+						name="ValidatorForm"
+						input="/ViewValidatorForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp"/>
+		</action>
+		
+		<action path="/ViewDynaActionForm"
+						type="org.apache.struts.actions.ForwardAction"
+						parameter="/validation/pages/DynaActionForm.jsp"/>
+			
+		<action path="/SubmitDynaActionForm"
+						type="com.tutran.common.action.validation.SubmitDynaActionFormAction"
+						name="DynaActionForm"
+						input="/ViewDynaActionForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp"/>
+			<forward name="fail" path="/validation/pages/DynaActionForm.jsp"/>
 		</action>
 	</action-mappings>
 	

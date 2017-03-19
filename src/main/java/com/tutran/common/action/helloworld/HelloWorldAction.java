@@ -1,4 +1,4 @@
-package com.tutran.common.action;
+package com.tutran.common.action.helloworld;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,7 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.tutran.common.form.HelloWorldForm;
+import com.tutran.common.form.helloworld.HelloWorldForm;
 
 public class HelloWorldAction extends Action {
 	
