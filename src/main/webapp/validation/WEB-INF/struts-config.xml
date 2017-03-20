@@ -17,6 +17,9 @@
 			<form-property name="password" type="java.lang.String"></form-property>
 			<form-property name="password2" type="java.lang.String"></form-property>
 		</form-bean>
+		
+		<form-bean name="LazyForm"
+			type="com.tutran.common.form.LazyForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -41,6 +44,18 @@
 						input="/ViewDynaActionForm.do">
 			<forward name="success" path="/validation/pages/Success.jsp"/>
 			<forward name="fail" path="/validation/pages/DynaActionForm.jsp"/>
+		</action>
+		
+		<action path="/ViewLazyForm"
+						type="org.apache.struts.actions.ForwardAction"
+						parameter="/validation/pages/LazyForm.jsp"/>
+			
+		<action path="/SubmitLazyForm"
+						type="com.tutran.common.action.validation.SubmitLazyFormAction"
+						name="LazyForm"
+						input="/ViewLazyForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp"/>
+			<forward name="fail" path="/validation/pages/LazyForm.jsp"/>
 		</action>
 	</action-mappings>
 	

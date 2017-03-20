@@ -9,16 +9,19 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
-import org.apache.struts.action.DynaActionForm;
 
 import com.tutran.common.action.BaseAction;
+import com.tutran.common.form.LazyForm;
 
-public class SubmitDynaActionFormAction extends BaseAction {
+public class SubmitLazyFormAction extends BaseAction {
 	
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		DynaActionForm frm = (DynaActionForm) form;
+		if (isErrorsExist(request)) {
+			return mapping.getInputForward();
+		}
+		LazyForm frm = (LazyForm) form;
 		ActionMessages errors = new ActionMessages();
 		String name = frm.getString("name");
 		String email = frm.getString("email");

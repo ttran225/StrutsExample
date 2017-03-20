@@ -34,12 +34,12 @@
 			</div>
 			<div class="main-login main-center">
 				<form class="form-horizontal" method="post" action="SubmitValidatorForm.do">
-					<font color="red">
-						<html:errors/>
-					</font>
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<div style="color:red">
+								<html:errors property="name"/>
+							</div>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-user fa" aria-hidden="true"></i></span>
@@ -51,6 +51,9 @@
 					<div class="form-group">
 						<label for="email" class="cols-sm-2 control-label">Your Email</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<div style="color:red">
+								<html:errors property="email"/>
+							</div>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-envelope fa" aria-hidden="true"></i></span>
@@ -62,6 +65,9 @@
 					<div class="form-group">
 						<label for="username" class="cols-sm-2 control-label">Username</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<div style="color:red">
+								<html:errors property="username"/>
+							</div>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-users fa" aria-hidden="true"></i></span>
@@ -73,6 +79,9 @@
 					<div class="form-group">
 						<label for="password" class="cols-sm-2 control-label">Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<div style="color:red">
+								<html:errors property="password"/>
+							</div>
 							<div class="input-group">
 								<span class="input-group-addon">
 								<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -84,6 +93,9 @@
 					<div class="form-group">
 						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
+							<div style="color:red">
+								<html:errors property="password2"/>
+							</div>
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>

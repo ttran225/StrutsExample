@@ -21,6 +21,10 @@
 <link href='https://fonts.googleapis.com/css?family=Oxygen'
 	rel='stylesheet' type='text/css'>
 
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+
 <title>Admin</title>
 </head>
 <body>
@@ -33,7 +37,7 @@
 				</div>
 			</div>
 			<div class="main-login main-center">
-				<form class="form-horizontal" method="post" action="SubmitDynaActionForm.do">
+				<form class="form-horizontal" id="registrationForm" method="post" action="SubmitLazyForm.do">
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
 						<div class="cols-sm-10">
@@ -43,7 +47,7 @@
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" id="name" class="form-control" required />
+									<input type="text" name="name" id="name" class="form-control" required />
 							</div>
 						</div>
 					</div>
@@ -114,7 +118,5 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
 </html>
