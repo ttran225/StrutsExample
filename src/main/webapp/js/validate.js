@@ -4,7 +4,7 @@ $().ready(function() {
 			rules: {
 				username: {
 					minlength: 3,
-					maslength: 15
+					maxlength: 15
 				}
 			},
 			messages: {
