@@ -3,13 +3,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DynaActionForm</title>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="bootstrap/css/bootstrapApplication.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapApplication.css">
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/jqueryApplication.js"></script>
+<style type="text/css">
+	body {
+		background-color: #294765;
+	}
+</style>
 </head>
 <body>
-	<div id="dynaActionFormDiv" class="container">
+	<div id="dynaActionForm" class="container">
 		<form id="dynaActionFormForm" class="form-horizontal" role="form">
 			<h2>Registration Form</h2>
 			<div class="form-group">
@@ -57,7 +62,6 @@
 					</select>
 				</div>
 			</div>
-			<!-- /.form-group -->
 			<div class="form-group">
 				<label class="control-label col-sm-3">Gender</label>
 				<div class="col-sm-6">
@@ -80,7 +84,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.form-group -->
 			<div class="form-group">
 				<label class="control-label col-sm-3">Meal Preference</label>
 				<div class="col-sm-9">
@@ -96,7 +99,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.form-group -->
 			<div class="form-group">
 				<div class="col-sm-9 col-sm-offset-3">
 					<div class="checkbox">
@@ -113,9 +115,6 @@
 				</div>
 			</div>
 		</form>
-		<!-- /form -->
 	</div>
-	<!-- ./container -->
-
 </body>
 </html>

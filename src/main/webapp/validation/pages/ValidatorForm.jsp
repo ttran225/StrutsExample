@@ -3,82 +3,104 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ValidatorForm</title>
-<link
-	href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
-	rel="stylesheet">
-<style></style>
-<script type="text/javascript"
-	src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript"
-	src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapApplication.css">
+<link rel="stylesheet" type="text/css" href="css/styleApplication.css">
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jqueryApplication.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<style type="text/css">
+	body {
+		padding-top: 90px;
+		background-color: #2e3d75;
+	}
+</style>
 </head>
 <body>
-	<div class="container">
+	<div id="validatorForm" class="container">
 		<div class="row">
-			<div class="span12">
-				<div class="" id="loginModal">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">×</button>
-						<h3>Have an Account?</h3>
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link" class="">Register</a>
+							</div>
+						</div>
+						<hr>
 					</div>
-					<div class="modal-body">
-						<div class="well">
-							<ul class="nav nav-tabs">
-								<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
-								<li><a href="#create" data-toggle="tab">Create Account</a></li>
-							</ul>
-							<div id="myTabContent" class="tab-content">
-								<div class="tab-pane active in" id="login">
-									<form class="form-horizontal" action="" method="POST">
-										<fieldset>
-											<div id="legend">
-												<legend class="">Login</legend>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="http://phpoll.com/login/process"
+									method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1"
+											class="form-control" placeholder="Username">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password"
+											tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember"
+											id="remember"> <label for="remember">
+											Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit"
+													tabindex="4" class="form-control btn btn-login"
+													value="Log In">
 											</div>
-											<div class="control-group">
-												<!-- Username -->
-												<label class="control-label" for="username">Username</label>
-												<div class="controls">
-													<input type="text" id="username" name="username"
-														placeholder="" class="input-xlarge">
-												</div>
-											</div>
-
-											<div class="control-group">
-												<!-- Password-->
-												<label class="control-label" for="password">Password</label>
-												<div class="controls">
-													<input type="password" id="password" name="password"
-														placeholder="" class="input-xlarge">
-												</div>
-											</div>
-
-
-											<div class="control-group">
-												<!-- Button -->
-												<div class="controls">
-													<button class="btn btn-success">Login</button>
-												</div>
-											</div>
-										</fieldset>
-									</form>
-								</div>
-								<div class="tab-pane fade" id="create">
-									<form id="tab">
-										<label>Username</label> <input type="text" value=""
-											class="input-xlarge"> <label>First Name</label> <input
-											type="text" value="" class="input-xlarge"> <label>Last
-											Name</label> <input type="text" value="" class="input-xlarge">
-										<label>Email</label> <input type="text" value=""
-											class="input-xlarge"> <label>Address</label>
-										<textarea value="Smith" rows="3" class="input-xlarge">                        </textarea>
-
-										<div>
-											<button class="btn btn-primary">Create Account</button>
 										</div>
-									</form>
-								</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="http://phpoll.com/recover" tabindex="5"
+														class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form"
+									action="http://phpoll.com/register/process" method="post"
+									role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1"
+											class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1"
+											class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password"
+											tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password"
+											id="confirm-password" tabindex="2" class="form-control"
+											placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit"
+													id="register-submit" tabindex="4"
+													class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -86,5 +108,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
