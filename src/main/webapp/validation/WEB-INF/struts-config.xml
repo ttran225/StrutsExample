@@ -60,7 +60,7 @@
 	</action-mappings>
 	
 	<message-resources
-		parameter="com.tutran.user.properties.user" />
+		parameter="com.tutran.common.properties.struts" />
 	
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
 		<set-property property="pathnames"

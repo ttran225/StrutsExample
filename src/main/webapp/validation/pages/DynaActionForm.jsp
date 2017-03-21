@@ -1,120 +1,121 @@
-<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
-<%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css"
-	href="bootstrap/css/bootstrap.css">
-
-<!-- Website CSS style -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
-<!-- Website Font style -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-<!-- Google Fonts -->
-<link href='https://fonts.googleapis.com/css?family=Passion+One'
-	rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Oxygen'
-	rel='stylesheet' type='text/css'>
-
-<title>Admin</title>
+<title>DynaActionForm</title>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrapApplication.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="row main">
-			<div class="panel-heading">
-				<div class="panel-title text-center">
-					<h1 class="title">Company Name</h1>
-					<hr />
+	<div id="dynaActionFormDiv" class="container">
+		<form id="dynaActionFormForm" class="form-horizontal" role="form">
+			<h2>Registration Form</h2>
+			<div class="form-group">
+				<label for="firstName" class="col-sm-3 control-label">Full
+					Name</label>
+				<div class="col-sm-9">
+					<input type="text" id="firstName" placeholder="Full Name"
+						class="form-control" autofocus=""> <span
+						class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
 				</div>
 			</div>
-			<div class="main-login main-center">
-				<form class="form-horizontal" method="post" action="SubmitDynaActionForm.do">
-					<div class="form-group">
-						<label for="name" class="cols-sm-2 control-label">Your Name</label><i class="fa fa-asterisk text-danger"></i>
-						<div class="cols-sm-10">
-							<div style="color:red">
-								<html:errors property="name"/>
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" id="name" class="form-control" required />
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="email" class="cols-sm-2 control-label">Your Email</label><i class="fa fa-asterisk text-danger"></i>
-						<div class="cols-sm-10">
-							<div style="color:red">
-								<html:errors property="email"/>
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="email" name="email" id="email" class="form-control" required />
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="username" class="cols-sm-2 control-label">Username</label><i class="fa fa-asterisk text-danger"></i>
-						<div class="cols-sm-10">
-							<div style="color:red">
-								<html:errors property="username"/>
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" name="username" id="username" class="form-control" required />
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="password" class="cols-sm-2 control-label">Password</label><i class="fa fa-asterisk text-danger"></i>
-						<div class="cols-sm-10">
-							<div style="color:red">
-								<html:errors property="password"/>
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon">
-								<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-								<input type="password" name="password" id="password" class="form-control" required />
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label><i class="fa fa-asterisk text-danger"></i>
-						<div class="cols-sm-10">
-							<div style="color:red">
-								<html:errors property="password2"/>
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" name="password2" id="password2" class="form-control" required />
-							</div>
-						</div>
-					</div>
-					
-					<div class="form-group ">
-						<html:submit styleClass="btn btn-primary btn-lg btn-block login-button">Register</html:submit>
-					</div>
-					<div class="login-register">
-						<a href="index.php">Login</a>
-					</div>
-				</form>
+			<div class="form-group">
+				<label for="email" class="col-sm-3 control-label">Email</label>
+				<div class="col-sm-9">
+					<input type="email" id="email" placeholder="Email"
+						class="form-control">
+				</div>
 			</div>
-		</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-3 control-label">Password</label>
+				<div class="col-sm-9">
+					<input type="password" id="password" placeholder="Password"
+						class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="birthDate" class="col-sm-3 control-label">Date
+					of Birth</label>
+				<div class="col-sm-9">
+					<input type="date" id="birthDate" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="country" class="col-sm-3 control-label">Country</label>
+				<div class="col-sm-9">
+					<select id="country" class="form-control">
+						<option>Afghanistan</option>
+						<option>Bahamas</option>
+						<option>Cambodia</option>
+						<option>Denmark</option>
+						<option>Ecuador</option>
+						<option>Fiji</option>
+						<option>Gabon</option>
+						<option>Haiti</option>
+					</select>
+				</div>
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<label class="control-label col-sm-3">Gender</label>
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-sm-4">
+							<label class="radio-inline"> <input type="radio"
+								id="femaleRadio" value="Female">Female
+							</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="radio-inline"> <input type="radio"
+								id="maleRadio" value="Male">Male
+							</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="radio-inline"> <input type="radio"
+								id="uncknownRadio" value="Unknown">Unknown
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<label class="control-label col-sm-3">Meal Preference</label>
+				<div class="col-sm-9">
+					<div class="checkbox">
+						<label> <input type="checkbox" id="calorieCheckbox"
+							value="Low calorie">Low calorie
+						</label>
+					</div>
+					<div class="checkbox">
+						<label> <input type="checkbox" id="saltCheckbox"
+							value="Low salt">Low salt
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<div class="col-sm-9 col-sm-offset-3">
+					<div class="checkbox">
+						<label> <input type="checkbox">I accept <a
+							href="#">terms</a>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<div class="col-sm-9 col-sm-offset-3">
+					<button type="submit" class="btn btn-primary btn-block">Register</button>
+				</div>
+			</div>
+		</form>
+		<!-- /form -->
 	</div>
+	<!-- ./container -->
 
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
 </html>

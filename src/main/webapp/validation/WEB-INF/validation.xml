@@ -6,19 +6,19 @@
    <formset>
       <form name="ValidatorForm">
    		 <field property="name" depends="required">
-		 	<msg name="required" key="err.user.name.required" />
+		 	<msg name="required" key="validatorform.error.name.required" />
 		 </field>
 		 
 		 <field property="email" depends="required,email">
-		 	<msg name="required" key="err.user.email.required" />
-		 	<msg name="email" key="err.user.email.invalid" />
+		 	<msg name="required" key="validatorform.error.email.required" />
+		 	<msg name="email" key="validatorform.error.email.invalid" />
 		 </field>
       
          <field property="username" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.username.required" />
-			<msg name="maxlength" key="err.user.username.length" />
-			<msg name="minlength" key="err.user.username.length" />
-			<msg name="mask" key="err.user.username.invalid" />
+         	<msg name="required" key="validatorform.error.username.required" />
+			<msg name="maxlength" key="validatorform.error.username.length" />
+			<msg name="minlength" key="validatorform.error.username.length" />
+			<msg name="mask" key="validatorform.error.username.invalid" />
 			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
             <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
 			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
@@ -38,10 +38,10 @@
          </field>
          
          <field property="password" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.password.required" />
-			<msg name="maxlength" key="err.user.password.length" />
-			<msg name="minlength" key="err.user.password.length" />
-			<msg name="mask" key="err.user.password.invalid" />
+         	<msg name="required" key="validatorform.error.password.required" />
+			<msg name="maxlength" key="validatorform.error.password.length" />
+			<msg name="minlength" key="validatorform.error.password.length" />
+			<msg name="mask" key="validatorform.error.password.invalid" />
 			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
             <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
 			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
@@ -61,8 +61,8 @@
          </field>
          
          <field property="password2" depends="required,validwhen">
-         	<msg name="required" key="err.user.password2.required" />
-         	<msg name="validwhen" key="err.user.password2.notmatch" />
+         	<msg name="required" key="validatorform.error.password2.required" />
+         	<msg name="validwhen" key="validatorform.error.password2.notmatch" />
 			<var>
 				<var-name>test</var-name>
 				<var-value>
@@ -141,7 +141,7 @@
      </form>
      
      <form name="LazyForm">
-   		 <field property="name" depends="required">
+   		 <field property="firstname" depends="required">
 		 	<msg name="required" key="err.user.name.required" />
 		 </field>
 		 
