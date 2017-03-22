@@ -3,229 +3,253 @@
         "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
 
 <form-validation>
-   <formset>
-      <form name="ValidatorForm">
-         <field property="username" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="validatorform.error.username.required" />
-			<msg name="maxlength" key="validatorform.error.username.length" />
-			<msg name="minlength" key="validatorform.error.username.length" />
-			<msg name="mask" key="validatorform.error.username.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>3</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9-_]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="email" depends="requiredif,email">
-		 	<msg name="requiredif" key="validatorform.error.email.required" />
-		 	<msg name="email" key="validatorform.error.email.invalid" />
-		 	<var>
-		 		<var-name>field[0]</var-name>
-		 		<var-value>action</var-value>
-		 	</var>
-		 	<var>
-		 		<var-name>fieldTest[0]</var-name>
-		 		<var-value>EQUAL</var-value>
-		 	</var>
-		 	<var>
-		 		<var-name>fieldValue[0]</var-name>
-		 		<var-value>REGISTER</var-value>
-		 	</var>
-		 </field>
-         
-         <field property="password" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="validatorform.error.password.required" />
-			<msg name="maxlength" key="validatorform.error.password.length" />
-			<msg name="minlength" key="validatorform.error.password.length" />
-			<msg name="mask" key="validatorform.error.password.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>7</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="password2" depends="requiredif,validwhen">
-         	<msg name="requiredif" key="validatorform.error.password2.required" />
-         	<msg name="validwhen" key="validatorform.error.password2.notmatch" />
-			<var>
-				<var-name>test</var-name>
-				<var-value>
-					(password == *this*)
-				</var-value>
-			</var>
-			<var>
-		 		<var-name>field[0]</var-name>
-		 		<var-value>action</var-value>
-		 	</var>
-		 	<var>
-		 		<var-name>fieldTest[0]</var-name>
-		 		<var-value>EQUAL</var-value>
-		 	</var>
-		 	<var>
-		 		<var-name>fieldValue[0]</var-name>
-		 		<var-value>REGISTER</var-value>
-		 	</var>
-		 </field>
-     </form>
-     
-     <form name="DynaActionForm">
-   		 <field property="name" depends="required">
-		 	<msg name="required" key="err.user.name.required" />
-		 </field>
-		 
-		 <field property="email" depends="required,email">
-		 	<msg name="required" key="err.user.email.required" />
-		 	<msg name="email" key="err.user.email.invalid" />
-		 </field>
-      
-         <field property="username" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.username.required" />
-			<msg name="maxlength" key="err.user.username.length" />
-			<msg name="minlength" key="err.user.username.length" />
-			<msg name="mask" key="err.user.username.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>3</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9-_]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="password" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.password.required" />
-			<msg name="maxlength" key="err.user.password.length" />
-			<msg name="minlength" key="err.user.password.length" />
-			<msg name="mask" key="err.user.password.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>7</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="password2" depends="required,validwhen">
-         	<msg name="required" key="err.user.password2.required" />
-         	<msg name="validwhen" key="err.user.password2.notmatch" />
-			<var>
-				<var-name>test</var-name>
-				<var-value>
-					(password == *this*)
-				</var-value>
+	<formset>
+		<form name="ValidatorForm">
+			<field property="username" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="validatorform.error.username.required" />
+				<msg name="maxlength" key="validatorform.error.username.length" />
+				<msg name="minlength" key="validatorform.error.username.length" />
+				<msg name="mask" key="validatorform.error.username.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>3</var-value>
 				</var>
-		 </field>
-     </form>
-     
-     <form name="LazyForm">
-   		 <field property="firstname" depends="required">
-		 	<msg name="required" key="err.user.name.required" />
-		 </field>
-		 
-		 <field property="email" depends="required,email">
-		 	<msg name="required" key="err.user.email.required" />
-		 	<msg name="email" key="err.user.email.invalid" />
-		 </field>
-      
-         <field property="username" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.username.required" />
-			<msg name="maxlength" key="err.user.username.length" />
-			<msg name="minlength" key="err.user.username.length" />
-			<msg name="mask" key="err.user.username.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>3</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9-_]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="password" depends="required,maxlength,minlength,mask">
-         	<msg name="required" key="err.user.password.required" />
-			<msg name="maxlength" key="err.user.password.length" />
-			<msg name="minlength" key="err.user.password.length" />
-			<msg name="mask" key="err.user.password.invalid" />
-			<arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
-			<arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
-            <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
-            <var>
-            	<var-name>minlength</var-name>
-				<var-value>7</var-value>
-			</var>		
-			<var>
-				<var-name>maxlength</var-name>
-				<var-value>15</var-value>
-			</var>
-            <var>
-				<var-name>mask</var-name>
-				<var-value>^[a-zA-Z0-9]*$</var-value>
-			</var>
-         </field>
-         
-         <field property="password2" depends="required,validwhen">
-         	<msg name="required" key="err.user.password2.required" />
-         	<msg name="validwhen" key="err.user.password2.notmatch" />
-			<var>
-				<var-name>test</var-name>
-				<var-value>
-					(password == *this*)
-				</var-value>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
 				</var>
-		 </field>
-     </form>
-  </formset>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9-_]*$</var-value>
+				</var>
+			</field>
+
+			<field property="email" depends="requiredif,email">
+				<msg name="requiredif" key="validatorform.error.email.required" />
+				<msg name="email" key="validatorform.error.email.invalid" />
+				<var>
+					<var-name>field[0]</var-name>
+					<var-value>action</var-value>
+				</var>
+				<var>
+					<var-name>fieldTest[0]</var-name>
+					<var-value>EQUAL</var-value>
+				</var>
+				<var>
+					<var-name>fieldValue[0]</var-name>
+					<var-value>REGISTER</var-value>
+				</var>
+			</field>
+
+			<field property="password" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="validatorform.error.password.required" />
+				<msg name="maxlength" key="validatorform.error.password.length" />
+				<msg name="minlength" key="validatorform.error.password.length" />
+				<msg name="mask" key="validatorform.error.password.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>7</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]*$</var-value>
+				</var>
+			</field>
+
+			<field property="password2" depends="requiredif,validwhen">
+				<msg name="requiredif" key="validatorform.error.password2.required" />
+				<msg name="validwhen" key="validatorform.error.password2.notmatch" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						((action == "REGISTER") and (password == *this*))
+					</var-value>
+				</var>
+				<var>
+					<var-name>field[0]</var-name>
+					<var-value>action</var-value>
+				</var>
+				<var>
+					<var-name>fieldTest[0]</var-name>
+					<var-value>EQUAL</var-value>
+				</var>
+				<var>
+					<var-name>fieldValue[0]</var-name>
+					<var-value>REGISTER</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="DynaActionForm">
+			<field property="name" depends="required">
+				<msg name="required" key="err.user.name.required" />
+			</field>
+
+			<field property="email" depends="required,email">
+				<msg name="required" key="err.user.email.required" />
+				<msg name="email" key="err.user.email.invalid" />
+			</field>
+
+			<field property="username" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="err.user.username.required" />
+				<msg name="maxlength" key="err.user.username.length" />
+				<msg name="minlength" key="err.user.username.length" />
+				<msg name="mask" key="err.user.username.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>3</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9-_]*$</var-value>
+				</var>
+			</field>
+
+			<field property="password" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="err.user.password.required" />
+				<msg name="maxlength" key="err.user.password.length" />
+				<msg name="minlength" key="err.user.password.length" />
+				<msg name="mask" key="err.user.password.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>7</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]*$</var-value>
+				</var>
+			</field>
+
+			<field property="password2" depends="required,validwhen">
+				<msg name="required" key="err.user.password2.required" />
+				<msg name="validwhen" key="err.user.password2.notmatch" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(password == *this*)
+					</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="LazyForm">
+			<field property="firstname" depends="required">
+				<msg name="required" key="err.user.name.required" />
+			</field>
+
+			<field property="email" depends="required,email">
+				<msg name="required" key="err.user.email.required" />
+				<msg name="email" key="err.user.email.invalid" />
+			</field>
+
+			<field property="username" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="err.user.username.required" />
+				<msg name="maxlength" key="err.user.username.length" />
+				<msg name="minlength" key="err.user.username.length" />
+				<msg name="mask" key="err.user.username.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>3</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9-_]*$</var-value>
+				</var>
+			</field>
+
+			<field property="password" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="err.user.password.required" />
+				<msg name="maxlength" key="err.user.password.length" />
+				<msg name="minlength" key="err.user.password.length" />
+				<msg name="mask" key="err.user.password.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>7</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]*$</var-value>
+				</var>
+			</field>
+
+			<field property="password2" depends="required,validwhen">
+				<msg name="required" key="err.user.password2.required" />
+				<msg name="validwhen" key="err.user.password2.notmatch" />
+				<var>
+					<var-name>test</var-name>
+					<var-value>
+						(password == *this*)
+					</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
 </form-validation>

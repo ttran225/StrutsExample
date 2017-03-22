@@ -39,7 +39,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<form id="login-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: block;">
-									<html:errors/>
+									<div class="error-required-fields"><html:errors/></div>
 									<div class="form-group">
 										<div class="error-required-fields"><html:errors property="username"/></div>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
@@ -67,6 +67,7 @@
 											</div>
 										</div>
 									</div>
+									<input type="hidden" name="action" id="action">
 								</form>
 								<form id="register-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
@@ -90,7 +91,6 @@
 										</div>
 									</div>
 								</form>
-								<input type="hidden" name="action" id="action">
 							</div>
 						</div>
 					</div>
