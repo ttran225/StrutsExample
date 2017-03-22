@@ -9,6 +9,7 @@ public class TestValidatorForm extends ValidatorForm {
 	private String username;
 	private String password;
 	private String password2;
+	private String action;
 	
 	/**
 	 * @return the name
@@ -69,6 +70,18 @@ public class TestValidatorForm extends ValidatorForm {
 	 */
 	public void setPassword2(String password2) {
 		this.password2 = password2;
+	}
+	/**
+	 * @return the action
+	 */
+	public String getAction() {
+		return action;
+	}
+	/**
+	 * @param action the action to set
+	 */
+	public void setAction(String action) {
+		this.action = action;
 	}
 	
 }
