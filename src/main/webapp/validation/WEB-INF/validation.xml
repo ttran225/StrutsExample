@@ -82,7 +82,7 @@
 				<var>
 					<var-name>test</var-name>
 					<var-value>
-						((action == "REGISTER") and (password == *this*))
+						((action == "LOGIN") or ((password == *this*) and (action == "REGISTER")))
 					</var-value>
 				</var>
 				<var>

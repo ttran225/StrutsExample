@@ -1,9 +1,9 @@
 $().ready(function() {
 	$("#login-submit").click(function() {
-		$("#action").val("LOGIN");
+		$(".action").val("LOGIN");
 	});
 	$("#register-submit").click(function() {
-		$("#action").val("REGISTER");
+		$(".action").val("REGISTER");
 	})
 });
 

@@ -67,20 +67,24 @@
 											</div>
 										</div>
 									</div>
-									<input type="hidden" name="action" id="action">
+									<input type="hidden" name="action" class="action">
 								</form>
 								<form id="register-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
+										<div class="error-required-fields"><html:errors property="username"/></div>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+										<div class="error-required-fields"><html:errors property="email"/></div>
+										<input type="email" name="email" id="email" tabindex="2" class="form-control" placeholder="Email Address" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+										<div class="error-required-fields"><html:errors property="password"/></div>
+										<input type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control"
+										<div class="error-required-fields"><html:errors property="password2"/></div>
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="4" class="form-control"
 											placeholder="Confirm Password">
 									</div>
 									<div class="form-group">
@@ -90,6 +94,7 @@
 											</div>
 										</div>
 									</div>
+									<input type="hidden" name="action" class="action">
 								</form>
 							</div>
 						</div>
