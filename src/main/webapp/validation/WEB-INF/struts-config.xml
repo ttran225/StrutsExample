@@ -6,67 +6,57 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="ValidatorForm"
-			type="com.tutran.common.form.validation.TestValidatorForm"/>
-			
-		<form-bean name="DynaActionForm"
-			type="org.apache.struts.action.DynaActionForm">
+		<form-bean name="ValidatorForm" type="com.tutran.common.form.validation.TestValidatorForm" />
+
+		<form-bean name="DynaActionForm" type="org.apache.struts.action.DynaActionForm">
 			<form-property name="name" type="java.lang.String"></form-property>
 			<form-property name="email" type="java.lang.String"></form-property>
 			<form-property name="username" type="java.lang.String"></form-property>
 			<form-property name="password" type="java.lang.String"></form-property>
 			<form-property name="password2" type="java.lang.String"></form-property>
 		</form-bean>
-		
-		<form-bean name="LazyForm"
-			type="com.tutran.common.form.LazyForm"/>
+
+		<form-bean name="LazyForm" type="com.tutran.common.form.LazyForm" />
 	</form-beans>
 
 	<action-mappings>
 		<action path="/InitValidatorForm"
-						type="com.tutran.common.action.validation.InitValidatorFormAction"
-						>
-			<forward name="success" path="/validation/pages/ValidatorForm.jsp"/>
+				type="com.tutran.common.action.validation.InitValidatorFormAction">
+			<forward name="success" path="/validation/pages/ValidatorForm.jsp" />
 		</action>
-			
+
 		<action path="/SubmitValidatorForm"
-						type="com.tutran.common.action.validation.SubmitValidatorFormAction"
-						name="ValidatorForm"
-						input="/InitValidatorForm.do">
-			<forward name="success" path="/validation/pages/Success.jsp"/>
+				type="com.tutran.common.action.validation.SubmitValidatorFormAction"
+				name="ValidatorForm" input="/InitValidatorForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp" />
 		</action>
-		
-		<action path="/ViewDynaActionForm"
-						type="org.apache.struts.actions.ForwardAction"
-						parameter="/validation/pages/DynaActionForm.jsp"/>
-			
+
+		<action path="/ViewDynaActionForm" type="org.apache.struts.actions.ForwardAction"
+				parameter="/validation/pages/DynaActionForm.jsp" />
+
 		<action path="/SubmitDynaActionForm"
-						type="com.tutran.common.action.validation.SubmitDynaActionFormAction"
-						name="DynaActionForm"
-						input="/ViewDynaActionForm.do">
-			<forward name="success" path="/validation/pages/Success.jsp"/>
-			<forward name="fail" path="/validation/pages/DynaActionForm.jsp"/>
+				type="com.tutran.common.action.validation.SubmitDynaActionFormAction"
+				name="DynaActionForm" input="/ViewDynaActionForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp" />
+			<forward name="fail" path="/validation/pages/DynaActionForm.jsp" />
 		</action>
-		
-		<action path="/ViewLazyForm"
-						type="org.apache.struts.actions.ForwardAction"
-						parameter="/validation/pages/LazyForm.jsp"/>
-			
+
+		<action path="/ViewLazyForm" type="org.apache.struts.actions.ForwardAction"
+				parameter="/validation/pages/LazyForm.jsp" />
+
 		<action path="/SubmitLazyForm"
-						type="com.tutran.common.action.validation.SubmitLazyFormAction"
-						name="LazyForm"
-						input="/ViewLazyForm.do">
-			<forward name="success" path="/validation/pages/Success.jsp"/>
-			<forward name="fail" path="/validation/pages/LazyForm.jsp"/>
+				type="com.tutran.common.action.validation.SubmitLazyFormAction" name="LazyForm"
+				input="/ViewLazyForm.do">
+			<forward name="success" path="/validation/pages/Success.jsp" />
+			<forward name="fail" path="/validation/pages/LazyForm.jsp" />
 		</action>
 	</action-mappings>
-	
-	<message-resources
-		parameter="com.tutran.common.properties.struts" />
-	
-	<plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
+
+	<message-resources parameter="com.tutran.common.properties.struts" />
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
 		<set-property property="pathnames"
-		value="/validation/WEB-INF/validator-rules.xml, /validation/WEB-INF/validation.xml"/>
+			value="/validation/WEB-INF/validator-rules.xml, /validation/WEB-INF/validation.xml" />
 	</plug-in>
-	
+
 </struts-config>
