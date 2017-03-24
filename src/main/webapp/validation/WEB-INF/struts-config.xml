@@ -20,14 +20,16 @@
 	</form-beans>
 
 	<action-mappings>
-		<action path="/InitValidatorForm"
-				type="com.tutran.common.action.validation.InitValidatorFormAction">
+		<action path="/ViewValidatorForm"
+				type="com.tutran.common.action.validation.ViewValidatorFormAction"
+				name="ValidatorForm"
+				validate="false">
 			<forward name="success" path="/validation/pages/ValidatorForm.jsp" />
 		</action>
 
 		<action path="/SubmitValidatorForm"
 				type="com.tutran.common.action.validation.SubmitValidatorFormAction"
-				name="ValidatorForm" input="/InitValidatorForm.do">
+				name="ValidatorForm" input="/ViewValidatorForm.do">
 			<forward name="success" path="/validation/pages/Success.jsp" />
 		</action>
 

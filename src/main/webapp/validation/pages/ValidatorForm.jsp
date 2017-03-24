@@ -1,4 +1,5 @@
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
@@ -26,12 +27,24 @@
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
-							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">Login</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link" class="">Register</a>
-							</div>
+							<c:choose>
+								<c:when test="${active == 'LOGIN'}">
+									<div class="col-xs-6">
+										<a href="#" class="active" id="login-form-link">Login</a>
+									</div>
+									<div class="col-xs-6">
+										<a href="#" id="register-form-link" class="">Register</a>
+									</div>
+								</c:when>
+								<c:otherwise>
+									<div class="col-xs-6">
+										<a href="#" id="login-form-link">Login</a>
+									</div>
+									<div class="col-xs-6">
+										<a href="#" class="active" id="register-form-link" class="">Register</a>
+									</div>
+								</c:otherwise>
+							</c:choose>
 						</div>
 						<hr>
 					</div>

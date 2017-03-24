@@ -4,25 +4,12 @@ import org.apache.struts.validator.ValidatorForm;
 
 public class TestValidatorForm extends ValidatorForm {
 	
-	private String name;
-	private String email;
 	private String username;
+	private String email;
 	private String password;
 	private String password2;
 	private String action;
 	
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
 	/**
 	 * @return the email
 	 */
