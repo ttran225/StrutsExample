@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jqueryApplication.js"></script>
-<!-- <script type="text/javascript" src="js/validate.js"></script> -->
+<script type="text/javascript" src="js/validate.js"></script>
 <style type="text/css">
 	body {
 		padding-top: 90px;
@@ -57,12 +57,12 @@
 							<div class="col-lg-12">
 								<form id="login-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'LOGIN'}"><div class="error-required-fields"><html:errors property="username"/></div></c:if>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
+										<c:if test="${!empty active && active == 'LOGIN'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>
 									</div>
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'LOGIN'}"><div class="error-required-fields"><html:errors property="password"/></div></c:if>
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+										<c:if test="${!empty active && active == 'LOGIN'}"><label class="error-required-fields"><html:errors property="password"/></label></c:if>
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember" id="remember"> <label for="remember">Remember Me</label>
@@ -87,21 +87,21 @@
 								</form>
 								<form id="register-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="username"/></div></c:if>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>
 									</div>
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="email"/></div></c:if>
 										<input type="email" name="email" id="email" tabindex="2" class="form-control" placeholder="Email Address" value="">
+										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="email"/></label></c:if>
 									</div>
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="password"/></div></c:if>
 										<input type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
+										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="password"/></label></c:if>
 									</div>
 									<div class="form-group">
-										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="password2"/></div></c:if>
 										<input type="password" name="password2" id="confirm-password" tabindex="4" class="form-control"
 											placeholder="Confirm Password">
+										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="password2"/></label></c:if>
 									</div>
 									<div class="form-group">
 										<div class="row">
