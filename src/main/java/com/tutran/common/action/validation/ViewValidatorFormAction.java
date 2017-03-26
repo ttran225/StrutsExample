@@ -17,8 +17,8 @@ public class ViewValidatorFormAction extends BaseAction {
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		String action = ((TestValidatorForm) form).getAction();
 		if (isErrorsExist(request)) {
+			String action = ((TestValidatorForm) form).getAction();
 			if (StringUtils.isNotBlank(action)) {
 				if (StrutsStringUtils.LOGIN_ACTION.equals(action)) {
 					request.setAttribute("active", StrutsStringUtils.LOGIN_ACTION);
@@ -30,6 +30,7 @@ public class ViewValidatorFormAction extends BaseAction {
 			request.setAttribute("active", StrutsStringUtils.LOGIN_ACTION);
 		}
 		
+		request.setAttribute("abc", StrutsStringUtils.LOGIN_ACTION);
 		return mapping.findForward("success");
 	}
 

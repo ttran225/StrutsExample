@@ -23,7 +23,8 @@
 		<action path="/ViewValidatorForm"
 				type="com.tutran.common.action.validation.ViewValidatorFormAction"
 				name="ValidatorForm"
-				validate="false">
+				validate="false"
+				scope="request">
 			<forward name="success" path="/validation/pages/ValidatorForm.jsp" />
 		</action>
 

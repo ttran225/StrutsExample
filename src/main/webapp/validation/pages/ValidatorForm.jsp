@@ -19,6 +19,9 @@
 		background-color: #2e3d75;
 	}
 </style>
+<script type="text/javascript">
+	var a = '${requestScope.active}';
+</script>
 </head>
 <body>
 	<div id="validatorForm" class="container">
@@ -28,7 +31,7 @@
 					<div class="panel-heading">
 						<div class="row">
 							<c:choose>
-								<c:when test="${active == 'LOGIN'}">
+								<c:when test="${param.active == 'LOGIN'}">
 									<div class="col-xs-6">
 										<a href="#" class="active" id="login-form-link">Login</a>
 									</div>
@@ -52,8 +55,8 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<form id="login-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: block;">
-									<div class="error-required-fields"><html:errors/></div>
 									<div class="form-group">
+											${param.abc}
 										<div class="error-required-fields"><html:errors property="username"/></div>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
 									</div>
