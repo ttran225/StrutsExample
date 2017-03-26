@@ -1,14 +1,16 @@
-$().ready(function() {
-	
-});
-
 $(function() {
-    $('#login-form-link').click(function(e) {
+	$('#login-submit').click(function() {
+		$(".action").val("LOGIN");
+	});
+	$('#register-submit').click(function() {
+		$(".action").val("REGISTER");
+	});
+	
+	$('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);
 		$('#register-form-link').removeClass('active');
 		$(this).addClass('active');
-		$(".action").val("LOGIN");
 		e.preventDefault();
 	});
 	$('#register-form-link').click(function(e) {
@@ -16,7 +18,6 @@ $(function() {
  		$("#login-form").fadeOut(100);
 		$('#login-form-link').removeClass('active');
 		$(this).addClass('active');
-		$(".action").val("REGISTER");
 		e.preventDefault();
 	});
 });

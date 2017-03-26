@@ -20,7 +20,20 @@
 	}
 </style>
 <script type="text/javascript">
-	var a = '${requestScope.active}';
+	$(document).ready(function() {
+		var action = '${active}';
+		if (action == "" || action == "LOGIN") {
+			$('#register-form-link').removeClass('active');
+			$('#login-form-link').addClass('active');
+			$('#login-form').show();
+			$('#register-form').hide();
+		} else {
+			$('#login-form-link').removeClass('active');
+			$('#register-form-link').addClass('active');
+			$('#register-form').show();
+			$('#login-form').hide();
+		}
+	});
 </script>
 </head>
 <body>
@@ -30,24 +43,12 @@
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
-							<c:choose>
-								<c:when test="${param.active == 'LOGIN'}">
-									<div class="col-xs-6">
-										<a href="#" class="active" id="login-form-link">Login</a>
-									</div>
-									<div class="col-xs-6">
-										<a href="#" id="register-form-link" class="">Register</a>
-									</div>
-								</c:when>
-								<c:otherwise>
-									<div class="col-xs-6">
-										<a href="#" id="login-form-link">Login</a>
-									</div>
-									<div class="col-xs-6">
-										<a href="#" class="active" id="register-form-link" class="">Register</a>
-									</div>
-								</c:otherwise>
-							</c:choose>
+							<div class="col-xs-6">
+								<a href="#" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
 						</div>
 						<hr>
 					</div>
@@ -56,12 +57,11 @@
 							<div class="col-lg-12">
 								<form id="login-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: block;">
 									<div class="form-group">
-											${param.abc}
-										<div class="error-required-fields"><html:errors property="username"/></div>
+										<c:if test="${!empty active && active == 'LOGIN'}"><div class="error-required-fields"><html:errors property="username"/></div></c:if>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
 									</div>
 									<div class="form-group">
-										<div class="error-required-fields"><html:errors property="password"/></div>
+										<c:if test="${!empty active && active == 'LOGIN'}"><div class="error-required-fields"><html:errors property="password"/></div></c:if>
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group text-center">
@@ -87,20 +87,20 @@
 								</form>
 								<form id="register-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<div class="error-required-fields"><html:errors property="username"/></div>
+										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="username"/></div></c:if>
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
 									<div class="form-group">
-										<div class="error-required-fields"><html:errors property="email"/></div>
+										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="email"/></div></c:if>
 										<input type="email" name="email" id="email" tabindex="2" class="form-control" placeholder="Email Address" value="">
 									</div>
 									<div class="form-group">
-										<div class="error-required-fields"><html:errors property="password"/></div>
+										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="password"/></div></c:if>
 										<input type="password" name="password" id="password" tabindex="3" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<div class="error-required-fields"><html:errors property="password2"/></div>
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="4" class="form-control"
+										<c:if test="${!empty active && active == 'REGISTER'}"><div class="error-required-fields"><html:errors property="password2"/></div></c:if>
+										<input type="password" name="password2" id="confirm-password" tabindex="4" class="form-control"
 											placeholder="Confirm Password">
 									</div>
 									<div class="form-group">
@@ -119,6 +119,5 @@
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

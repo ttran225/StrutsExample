@@ -25,12 +25,11 @@ public class ViewValidatorFormAction extends BaseAction {
 				} else if (StrutsStringUtils.REGISTER_ACTION.equals(action)) {
 					request.setAttribute("active", StrutsStringUtils.REGISTER_ACTION);
 				}
+			} else {
+				request.setAttribute("active", StrutsStringUtils.LOGIN_ACTION);
 			}
-		} else {
-			request.setAttribute("active", StrutsStringUtils.LOGIN_ACTION);
 		}
 		
-		request.setAttribute("abc", StrutsStringUtils.LOGIN_ACTION);
 		return mapping.findForward("success");
 	}
 
