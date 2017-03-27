@@ -2,7 +2,7 @@ $().ready(function() {
 	$("#dynaActionFormForm").validate({
 		rules: {
 			fullName: {
-				required: "Full name is required."
+				required: true
 			},
 			email: {
 				required: true,
@@ -12,6 +12,32 @@ $().ready(function() {
 				required: true,
 				minlength: 3,
 				maxlength: 15
+			},
+			birthDate: {
+				required: true
+			},
+			country: {
+				required: true
+			},
+			gender: {
+				required: true
+			},
+			accept: {
+				required: true
+			}
+		},
+		messages: {
+			fullName: {
+				required: "Full name is required."
+			},
+			email: {
+				required: "Email address is required.",
+				email: "Email address is invalid."
+			},
+			password: {
+				required: "Password is required.",
+				minlength: "Password must be at least {0} characters in length.",
+				maxlength: "Password must be at most {0} characters in length."
 			},
 			birthDate: {
 				required: "Date of Birth is required."
@@ -24,17 +50,6 @@ $().ready(function() {
 			},
 			accept: {
 				required: "Accept is required."
-			}
-		},
-		messages: {
-			email: {
-				required: "Email address is required.",
-				email: "Email address is invalid."
-			},
-			password: {
-				required: "Password is required.",
-				minlength: "Password must be at least {0} characters in length.",
-				maxlength: "Password must be at most {0} characters in length."
 			}
 		},
 		errorClass: "error-required-fields"

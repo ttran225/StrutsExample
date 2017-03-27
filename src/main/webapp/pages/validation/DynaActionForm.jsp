@@ -1,3 +1,5 @@
+<%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -23,7 +25,8 @@
 			<div class="form-group">
 				<label for="fullName" class="col-sm-3 control-label">Full Name</label>
 				<div class="col-sm-9">
-					<input type="text" name="fullName" id="fullName" placeholder="Full Name" class="form-control" autofocus=""> 
+					<input type="text" name="fullName" id="fullName" placeholder="Full Name" class="form-control" autofocus> 
+					<label class="error-required-fields"><html:errors property="fullName"/></label>
 					<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
 				</div>
 			</div>
@@ -64,16 +67,17 @@
 				<label class="control-label col-sm-3">Gender</label>
 				<div class="col-sm-6">
 					<div class="row">
-						<div class="col-sm-4">
-							<label class="radio-inline"> <input type="radio" name="gender" id="femaleRadio" value="Female">Female</label>
-						</div>
-						<div class="col-sm-4">
-							<label class="radio-inline"> <input type="radio" name="gender" id="maleRadio" value="Male">Male</label>
-						</div>
-						<div class="col-sm-4">
-							<label class="radio-inline"> <input type="radio" name="gender" id="uncknownRadio" value="Unknown">Unknown</label>
-						</div>
-						<input type="hidden" name="gender" id="gender">
+						<fieldset name="gender">
+							<div class="col-sm-4">
+								<label class="radio-inline"> <input type="radio" name="gender" id="femaleRadio" value="Female">Female</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="radio-inline"> <input type="radio" name="gender" id="maleRadio" value="Male">Male</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="radio-inline"> <input type="radio" name="gender" id="uncknownRadio" value="Unknown">Unknown</label>
+							</div>
+						</fieldset>
 					</div>
 				</div>
 			</div>
@@ -94,9 +98,11 @@
 			</div>
 			<div class="form-group">
 				<div class="col-sm-9 col-sm-offset-3">
-					<div class="checkbox">
-						<label><input type="checkbox" name="accept" id="accept">I accept <a href="#">terms</a></label>
-					</div>
+					<fieldset name="accept">
+						<div class="checkbox">
+							<label><input type="checkbox" name="accept" id="accept">I accept <a href="#">terms</a></label>
+						</div>
+					</fieldset>
 				</div>
 			</div>
 			<!-- /.form-group -->

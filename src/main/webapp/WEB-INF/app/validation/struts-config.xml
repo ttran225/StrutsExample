@@ -41,8 +41,11 @@
 		</action>
 
 		<action path="/ViewDynaActionForm" 
-				type="org.apache.struts.actions.ForwardAction"
-				parameter="/pages/validation/DynaActionForm.jsp" />
+						type="com.tutran.common.action.validation.ViewDynaActionFormAction"
+						name="DynaActionForm"
+						validate="false">
+			<forward name="success" path="/pages/validation/DynaActionForm.jsp" />
+		</action>
 
 		<action path="/SubmitDynaActionForm"
 				type="com.tutran.common.action.validation.SubmitDynaActionFormAction"
