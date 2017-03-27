@@ -11,8 +11,8 @@
 <link rel="stylesheet" type="text/css" href="css/styleApplication.css">
 <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/jqueryApplication.js"></script>
-<script type="text/javascript" src="js/validate.js"></script>
+<script type="text/javascript" src="js/validation/validatorForm.js"></script>
+<script type="text/javascript" src="js/validation/validate.js"></script>
 <style type="text/css">
 	body {
 		padding-top: 90px;

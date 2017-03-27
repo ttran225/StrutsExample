@@ -73,30 +73,44 @@ $().ready(function() {
 		errorClass: "error-required-fields"
 	});
 	
-	// validate lazyform
-	$("#lazyFormForm").validate({
+	// validate dynaactionform
+	$("#dynaActionFormForm").validate({
 		rules: {
-			firstname: "required",
-			lastname: "required",
-			address: "required",
-			city: "required", 
-			state: "required", 
-			zip: "required",
-			phone: "required",
+			fullName: {
+				required: "Full name is required."
+			},
 			email: {
 				required: true,
-				email: true
+				email: true,
+			},
+			password: {
+				required: true,
+				minlength: 3,
+				maxlength: 15
+			},
+			birthDate: {
+				required: "Date of Birth is required."
+			},
+			country: {
+				required: "Country is required."
+			},
+			gender: {
+				required: "Gender is required."
+			},
+			accept: {
+				required: "Accept is required."
 			}
 		},
 		messages: {
-			firstname: "Please enter your first name",
-			lastname: "Please enter your last name",
-			address: "Please enter your address",
-			city: "Please enter your city",
-			state: "Please enter your state",
-			zip: "Please enter your zip",
-			phone: "Please enter your phone",
-			email: "Please enter a valid email address"
+			email: {
+				required: "Email address is required.",
+				email: "Email address is invalid."
+			},
+			password: {
+				required: "Password is required.",
+				minlength: "Password must be at least {0} characters in length.",
+				maxlength: "Password must be at most {0} characters in length."
+			}
 		},
 		errorClass: "error-required-fields"
 	});

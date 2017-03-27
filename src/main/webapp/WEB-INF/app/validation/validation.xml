@@ -101,7 +101,7 @@
 		</form>
 
 		<form name="DynaActionForm">
-			<field property="name" depends="required">
+			<field property="fullName" depends="required">
 				<msg name="required" key="err.user.name.required" />
 			</field>
 

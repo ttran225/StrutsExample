@@ -14,9 +14,9 @@
     <init-param>
         <param-name>config</param-name>
         <param-value>
-         /helloworld/WEB-INF/struts-config.xml,
-         /validation/WEB-INF/struts-config.xml,
-         /tile/WEB-INF/struts-config.xml
+         /WEB-INF/app/helloworld/struts-config.xml,
+         /WEB-INF/app/validation/struts-config.xml,
+         /WEB-INF/app/tile/struts-config.xml
         </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
@@ -28,6 +28,6 @@
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>ViewValidatorForm.do</welcome-file>
+  	<welcome-file>ViewDynaActionForm.do</welcome-file>
   </welcome-file-list>
 </web-app>

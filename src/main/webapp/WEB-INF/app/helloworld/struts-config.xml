@@ -14,7 +14,7 @@
 		<action path="/ViewHelloWorld" 
 						type="com.tutran.common.action.helloworld.HelloWorldAction" 
 						name="HelloWorldForm">
-			<forward name="success" path="/helloworld/pages/HelloWorld.jsp"/>
+			<forward name="success" path="/pages/helloworld/HelloWorld.jsp"/>
 	   </action>
 	</action-mappings>
 	
