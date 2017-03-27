@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/validation/validatorForm.js"></script>
-<script type="text/javascript" src="js/validation/validate.js"></script>
+<script type="text/javascript" src="js/validation/validatorFormValidation.js"></script>
 <style type="text/css">
 	body {
 		padding-top: 90px;

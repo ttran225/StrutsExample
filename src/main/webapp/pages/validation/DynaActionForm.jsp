@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/validation/dynaActionForm.js"></script>
-<script type="text/javascript" src="js/validation/validate.js"></script>
+<script type="text/javascript" src="js/validation/dynaActionFormValidation.js"></script>
 <style type="text/css">
 	body {
 		background-color: #294765;
