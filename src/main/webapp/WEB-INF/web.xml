@@ -28,6 +28,6 @@
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>ViewActionForm.do</welcome-file>
+  	<welcome-file>ViewDynaActionForm.do</welcome-file>
   </welcome-file-list>
 </web-app>

@@ -68,38 +68,32 @@ h2 {
 		<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-body">
-					<form method="POST" action="#" role="form">
+					<form method="POST" action="SubmitActionForm.do" role="form">
 						<div class="form-group">
 							<h2>Create account</h2>
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="signupName">Your name</label> <input
-								id="signupName" type="text" maxlength="50" class="form-control">
+							<label class="control-label" for="signupName">Your name</label> 
+							<input type="text" name="signupName" id="signupName" maxlength="50" class="form-control">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="signupEmail">Email</label> <input
-								id="signupEmail" type="email" maxlength="50"
-								class="form-control">
+							<label class="control-label" for="signupEmail">Email</label> 
+							<input type="email" name="signupEmail" id="signupEmail" maxlength="50" class="form-control">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="signupEmailagain">Email
-								again</label> <input id="signupEmailagain" type="email" maxlength="50"
-								class="form-control">
+							<label class="control-label" for="signupEmailagain">Email again</label> 
+							<input type="email" name="signupEmailagain" id="signupEmailagain" maxlength="50" class="form-control">
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupPassword">Password</label>
-							<input id="signupPassword" type="password" maxlength="25"
-								class="form-control" placeholder="at least 6 characters"
-								length="40">
+							<input type="password" name="signupPassword" id="signupPassword" maxlength="25" class="form-control" placeholder="at least 6 characters">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="signupPasswordagain">Password
-								again</label> <input id="signupPasswordagain" type="password"
-								maxlength="25" class="form-control">
+							<label class="control-label" for="signupPasswordagain">Password again</label> 
+							<input type="password" name="signupPasswordagain" id="signupPasswordagain" maxlength="25" class="form-control">
 						</div>
 						<div class="form-group">
-							<button id="signupSubmit" type="submit"
-								class="btn btn-info btn-block">Create your account</button>
+							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
 						</div>
 						<p class="form-group">
 							By creating an account, you agree to our <a href="#">Terms of
