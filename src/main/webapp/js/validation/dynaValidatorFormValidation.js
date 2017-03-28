@@ -1,5 +1,5 @@
 $().ready(function() {
-	$("#dynaActionFormForm").validate({
+	$("#dynaValidatorFormForm").validate({
 		rules: {
 			fullName: {
 				required: true

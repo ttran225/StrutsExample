@@ -111,9 +111,9 @@
 }
 
 /* *****************************************
-*     DynaActionForm     *
+*     DynaValidatorForm     *
 * ***************************************** */
-#dynaActionForm *[role="form"] {
+#dynaValidatorForm *[role="form"] {
 	max-width: 530px;
 	padding: 15px;
 	margin: 0 auto;
@@ -121,7 +121,7 @@
 	border-radius: 0.3em;
 }
 
-#dynaActionForm *[role="form"] h2 {
+#dynaValidatorForm *[role="form"] h2 {
 	margin-left: 5em;
 	margin-bottom: 1em;
 }

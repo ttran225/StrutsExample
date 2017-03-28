@@ -4,14 +4,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DynaActionForm</title>
+<title>DynaValidatorForm</title>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapApplication.css">
 <link rel="stylesheet" type="text/css" href="css/styleApplication.css">
 <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/validation/dynaActionForm.js"></script>
-<script type="text/javascript" src="js/validation/dynaActionFormValidation.js"></script>
+<script type="text/javascript" src="js/validation/dynaValidatorForm.js"></script>
+<script type="text/javascript" src="js/validation/dynaValidatorFormValidation.js"></script>
 <style type="text/css">
 	body {
 		background-color: #294765;
@@ -19,8 +19,8 @@
 </style>
 </head>
 <body>
-	<div id="dynaActionForm" class="container">
-		<form id="dynaActionFormForm" class="form-horizontal" role="form" method="post" action="SubmitDynaActionForm.do">
+	<div id="dynaValidatorForm" class="container">
+		<form id="dynaValidatorFormForm" class="form-horizontal" role="form" method="post" action="SubmitDynaValidatorForm.do">
 			<h2>Registration Form</h2>
 			<div class="form-group">
 				<label for="fullName" class="col-sm-3 control-label">Full Name</label>

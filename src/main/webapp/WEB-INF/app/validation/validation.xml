@@ -100,7 +100,7 @@
 			</field>
 		</form>
 
-		<form name="DynaActionForm">
+		<form name="DynaValidatorForm">
 			<field property="fullName" depends="required">
 				<msg name="required" key="dynaactionform.error.fullName.required" />
 			</field>

@@ -9,7 +9,7 @@ import org.apache.struts.action.ActionMapping;
 
 import com.tutran.common.action.BaseAction;
 
-public class ViewDynaActionFormAction extends BaseAction {
+public class ViewDynaValidatorFormAction extends BaseAction {
 	
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
