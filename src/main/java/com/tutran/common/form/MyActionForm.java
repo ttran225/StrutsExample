@@ -9,6 +9,7 @@ public class MyActionForm extends ActionForm {
 	private String signupEmailagain;
 	private String signupPassword;
 	private String signupPasswordagain;
+	private boolean submit;
 	/**
 	 * @return the signupName
 	 */
@@ -68,6 +69,18 @@ public class MyActionForm extends ActionForm {
 	 */
 	public void setSignupPasswordagain(String signupPasswordagain) {
 		this.signupPasswordagain = signupPasswordagain;
+	}
+	/**
+	 * @return the submit
+	 */
+	public boolean isSubmit() {
+		return submit;
+	}
+	/**
+	 * @param submit the submit to set
+	 */
+	public void setSubmit(boolean submit) {
+		this.submit = submit;
 	}
 	
 }

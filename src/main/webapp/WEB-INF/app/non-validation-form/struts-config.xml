@@ -16,14 +16,15 @@
 
 	<action-mappings>
 		<action path="/ViewActionForm" 
-				type="com.tutran.common.action.ViewActionFormAction">
+				type="com.tutran.common.action.ViewActionFormAction"
+				name="ActionForm">
 			<forward name="success" path="/pages/non-validation-form/ActionForm.jsp"/>
 	   </action>
 	   
 	   <action path="/SubmitActionForm"
 				type="com.tutran.common.action.SubmitActionFormAction"
 				name="ActionForm">
-			<forward name="success" path="/pages/validation-form/Success.jsp" />
+			<forward name="success" path="/ViewActionForm.do" />
 		</action>
 		
 		<action path="/ViewDynaActionForm" 

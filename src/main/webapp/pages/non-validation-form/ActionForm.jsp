@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -74,35 +76,62 @@ h2 {
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupName">Your name</label> 
-							<input type="text" name="signupName" id="signupName" maxlength="50" class="form-control">
+							<c:if test="${!submit}">
+								<input type="text" name="signupName" id="signupName" maxlength="50" class="form-control">
+							</c:if>
+							<c:if test="${submit}">
+								<c:out value="${form.signupName}"/>
+							</c:if>
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupEmail">Email</label> 
-							<input type="email" name="signupEmail" id="signupEmail" maxlength="50" class="form-control">
+							<c:if test="${!submit}">
+								<input type="email" name="signupEmail" id="signupEmail" maxlength="50" class="form-control">
+							</c:if>
+							<c:if test="${submit}">
+								<c:out value="${form.signupEmail}"/>
+							</c:if>
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupEmailagain">Email again</label> 
-							<input type="email" name="signupEmailagain" id="signupEmailagain" maxlength="50" class="form-control">
+							<c:if test="${!submit}">
+								<input type="email" name="signupEmailagain" id="signupEmailagain" maxlength="50" class="form-control">
+							</c:if>
+							<c:if test="${submit}">
+								<c:out value="${form.signupEmailagain}"/>
+							</c:if>
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupPassword">Password</label>
-							<input type="password" name="signupPassword" id="signupPassword" maxlength="25" class="form-control" placeholder="at least 6 characters">
+							<c:if test="${!submit}">
+								<input type="password" name="signupPassword" id="signupPassword" maxlength="25" class="form-control" placeholder="at least 6 characters">
+							</c:if>
+							<c:if test="${submit}">
+								<c:out value="${form.signupPassword}"/>
+							</c:if>
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupPasswordagain">Password again</label> 
-							<input type="password" name="signupPasswordagain" id="signupPasswordagain" maxlength="25" class="form-control">
+							<c:if test="${!submit}">
+								<input type="password" name="signupPasswordagain" id="signupPasswordagain" maxlength="25" class="form-control">
+							</c:if>
+							<c:if test="${submit}">
+								<c:out value="${form.signupPasswordagain}"/>
+							</c:if>
 						</div>
-						<div class="form-group">
-							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
-						</div>
-						<p class="form-group">
-							By creating an account, you agree to our <a href="#">Terms of
-								Use</a> and our <a href="#">Privacy Policy</a>.
-						</p>
-						<hr>
-						<p></p>
-						Already have an account? <a href="#">Sign in</a>
-						<p></p>
+						<c:if test="${!submit}">
+							<div class="form-group">
+								<input type="submit" name="submit" id="signupSubmit" class="btn btn-info btn-block" value="Create your account">
+							</div>
+							<p class="form-group">
+								By creating an account, you agree to our <a href="#">Terms of
+									Use</a> and our <a href="#">Privacy Policy</a>.
+							</p>
+							<hr>
+							<p></p>
+							Already have an account? <a href="#">Sign in</a>
+							<p></p>
+						</c:if>
 					</form>
 				</div>
 			</div>
