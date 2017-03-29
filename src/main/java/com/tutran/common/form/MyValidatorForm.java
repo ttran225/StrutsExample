@@ -2,7 +2,7 @@ package com.tutran.common.form;
 
 import org.apache.struts.validator.ValidatorForm;
 
-public class TestValidatorForm extends ValidatorForm {
+public class MyValidatorForm extends ValidatorForm {
 	
 	private String username;
 	private String email;

@@ -8,14 +8,14 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.tutran.common.form.TestValidatorForm;
+import com.tutran.common.form.MyValidatorForm;
 
 public class SubmitValidatorFormAction extends Action{
 	
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		TestValidatorForm frm = (TestValidatorForm) form;
+		MyValidatorForm frm = (MyValidatorForm) form;
 		System.out.println(frm);
 		return mapping.findForward("success");
 	}

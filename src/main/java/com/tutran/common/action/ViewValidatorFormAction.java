@@ -8,7 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.tutran.common.form.TestValidatorForm;
+import com.tutran.common.form.MyValidatorForm;
 import com.tutran.common.util.StrutsStringUtils;
 
 public class ViewValidatorFormAction extends BaseAction {
@@ -17,7 +17,7 @@ public class ViewValidatorFormAction extends BaseAction {
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		if (isErrorsExist(request)) {
-			String action = ((TestValidatorForm) form).getAction();
+			String action = ((MyValidatorForm) form).getAction();
 			if (StringUtils.isNotBlank(action)) {
 				if (StrutsStringUtils.LOGIN_ACTION.equals(action)) {
 					request.setAttribute("active", StrutsStringUtils.LOGIN_ACTION);

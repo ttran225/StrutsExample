@@ -6,7 +6,7 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="ValidatorForm" type="com.tutran.common.form.validation.TestValidatorForm" />
+		<form-bean name="ValidatorForm" type="com.tutran.common.form.MyValidatorForm" />
 
 		<form-bean name="DynaValidatorForm" type="org.apache.struts.validator.DynaValidatorForm">
 			<form-property name="fullName" type="java.lang.String"></form-property>
@@ -24,42 +24,43 @@
 
 	<action-mappings>
 		<action path="/ViewValidatorForm"
-				type="com.tutran.common.action.validation.ViewValidatorFormAction"
+				type="com.tutran.common.action.ViewValidatorFormAction"
 				name="ValidatorForm"
 				validate="false">
-			<forward name="success" path="/pages/validation/ValidatorForm.jsp" />
+			<forward name="success" path="/pages/validation-form/ValidatorForm.jsp" />
 		</action>
 
 		<action path="/SubmitValidatorForm"
-				type="com.tutran.common.action.validation.SubmitValidatorFormAction"
+				type="com.tutran.common.action.SubmitValidatorFormAction"
 				name="ValidatorForm" 
 				input="/ViewValidatorForm.do">
-			<forward name="success" path="/pages/validation/Success.jsp" />
+			<forward name="success" path="/pages/validation-form/Success.jsp" />
 		</action>
 
 		<action path="/ViewDynaValidatorForm" 
-						type="com.tutran.common.action.validation.ViewDynaValidatorFormAction"
+						type="com.tutran.common.action.ViewDynaValidatorFormAction"
 						name="DynaValidatorForm"
 						validate="false">
-			<forward name="success" path="/pages/validation/DynaValidatorForm.jsp" />
+			<forward name="success" path="/pages/validation-form/DynaValidatorForm.jsp" />
 		</action>
 
 		<action path="/SubmitDynaValidatorForm"
-				type="com.tutran.common.action.validation.SubmitDynaValidatorFormAction"
+				type="com.tutran.common.action.SubmitDynaValidatorFormAction"
 				name="DynaValidatorForm" 
 				input="/ViewDynaValidatorForm.do">
-			<forward name="success" path="/pages/validation/Success.jsp" />
-			<forward name="fail" path="/pages/validation/DynaValidatorForm.jsp" />
+			<forward name="success" path="/pages/validation-form/Success.jsp" />
+			<forward name="fail" path="/pages/validation-form/DynaValidatorForm.jsp" />
 		</action>
 
 		<action path="/ViewLazyForm" type="org.apache.struts.actions.ForwardAction"
-				parameter="/pages/validation/LazyForm.jsp" />
+				parameter="/pages/validation-form/LazyForm.jsp" />
 
 		<action path="/SubmitLazyForm"
-				type="com.tutran.common.action.validation.SubmitLazyFormAction" name="LazyForm"
+				type="com.tutran.common.action.SubmitLazyFormAction" 
+				name="LazyForm"
 				input="/ViewLazyForm.do">
-			<forward name="success" path="/pages/validation/Success.jsp" />
-			<forward name="fail" path="/pages/validation/LazyForm.jsp" />
+			<forward name="success" path="/pages/validation-form/Success.jsp" />
+			<forward name="fail" path="/pages/validation-form/LazyForm.jsp" />
 		</action>
 	</action-mappings>
 
