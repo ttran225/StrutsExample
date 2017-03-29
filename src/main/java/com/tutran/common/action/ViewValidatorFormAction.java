@@ -1,4 +1,4 @@
-package com.tutran.common.action.validation;
+package com.tutran.common.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,8 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import com.tutran.common.action.BaseAction;
-import com.tutran.common.form.validation.TestValidatorForm;
+import com.tutran.common.form.TestValidatorForm;
 import com.tutran.common.util.StrutsStringUtils;
 
 public class ViewValidatorFormAction extends BaseAction {

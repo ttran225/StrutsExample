@@ -1,4 +1,4 @@
-package com.tutran.common.action.validation;
+package com.tutran.common.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +10,6 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
-import com.tutran.common.action.BaseAction;
 import com.tutran.common.form.LazyForm;
 
 public class SubmitLazyFormAction extends BaseAction {

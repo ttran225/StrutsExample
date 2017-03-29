@@ -1,4 +1,4 @@
-package com.tutran.common.form.validation;
+package com.tutran.common.form;
 
 import org.apache.struts.validator.ValidatorForm;
 
