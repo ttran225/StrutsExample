@@ -11,14 +11,29 @@
 <body>
 
 <div class="container">
-  <h2>List Group With Linked Items</h2>
-  <div class="list-group">
-    <a href="ViewActionForm.do" class="list-group-item">View Action Form</a>
-    <a href="ViewDynaActionForm.do" class="list-group-item">View Dynamic Action Form</a>
-    <a href="ViewValidatorForm.do" class="list-group-item">View Validator Form</a>
-    <a href="ViewDynaValidatorForm.do" class="list-group-item">View Dynamic Validator Form</a>
-    <a href="ViewLazyForm.do" class="list-group-item">View Lazy Form</a>
-  </div>
+  <h2>Forms</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center" >Non validate</th>
+        <th class="text-center">Validate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-md-6"><a href="ViewActionForm.do" class="list-group-item">Action Form</a></td>
+        <td class="col-md-6"><a href="ViewValidatorForm.do" class="list-group-item">Validator Form</a></td>
+      </tr>
+      <tr>
+      	<td class="col-md-6"><a href="ViewDynaActionForm.do" class="list-group-item">Dynamic Action Form</a></td>
+        <td class="col-md-6"><a href="ViewDynaValidatorForm.do" class="list-group-item">Dynamic Validator Form</a></td>
+      </tr>
+      <tr>
+      	<td class="col-md-6"></td>
+        <td class="col-md-6"><a href="ViewLazyForm.do" class="list-group-item">Lazy Form</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 </body>

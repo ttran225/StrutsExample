@@ -35,7 +35,7 @@
 	   <action path="/SubmitDynaActionForm"
 				type="com.tutran.common.action.SubmitDynaActionFormAction"
 				name="DynaActionForm">
-			<forward name="success" path="/pages/validation-form/Success.jsp" />
+			<forward name="success" path="/ViewDynaActionForm.do" />
 		</action>
 	</action-mappings>
 	

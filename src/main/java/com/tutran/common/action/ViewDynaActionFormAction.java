@@ -8,12 +8,21 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.DynaActionForm;
 
+import com.tutran.common.form.MyActionForm;
+
 public class ViewDynaActionFormAction extends BaseAction {
 	
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		DynaActionForm frm = (DynaActionForm) form;
+		String submit = request.getParameter("submit");
+		if (submit == null) {
+			request.setAttribute("submit", false);
+		} else {
+			DynaActionForm frm = (DynaActionForm) form;
+			request.setAttribute("submit", true);
+			request.setAttribute("form", frm);
+		}
 		return mapping.findForward("success");
 	}
 

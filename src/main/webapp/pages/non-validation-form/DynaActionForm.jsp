@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html lang="en" class="no-js"><head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
@@ -4531,11 +4533,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							<h1>Log in</h1>
 							<p>
 								<label for="username" class="uname"> Your email or username </label> 
-								<input type="text" id="username" name="username" required="required" placeholder="myusername or mymail@mail.com">
+								<c:if test="${!submit}">
+									<input type="text" id="username" name="username" placeholder="myusername or mymail@mail.com">
+								</c:if>
+								<c:if test="${submit}">
+									<c:out value="${form.username}"></c:out>
+								</c:if>
 							</p>
 							<p>
 								<label for="password" class="youpasswd"> Your password </label>
-								<input type="password" id="password" name="password" required="required" placeholder="eg. X8df!90EO">
+								<c:if test="${!submit}">
+									<input type="password" id="password" name="password" placeholder="eg. X8df!90EO">
+								</c:if>
+								<c:if test="${submit}">
+									<c:out value="${form.password}"></c:out>
+								</c:if>
 							</p>
 							<p class="keeplogin">
 								<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping"> 
@@ -4545,8 +4557,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 								<input type="submit" value="Login">
 							</p>
 							<p class="change_link">
-								Not a member yet ? <a href="#toregister" class="to_register">Join
-									us</a>
+								Not a member yet ? <a href="#toregister" class="to_register">Join	us</a>
 							</p>
 						</form>
 					</div>
@@ -4556,32 +4567,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							<h1>Sign up</h1>
 							<p>
 								<label for="usernamesignup" class="uname">Your username</label>
-								<input id="usernamesignup" name="usernamesignup"
-									required="required" type="text"
-									placeholder="mysuperusername690">
+								<input id="usernamesignup" name="usernamesignup" type="text" placeholder="mysuperusername690">
 							</p>
 							<p>
-								<label for="emailsignup" class="youmail"> Your email</label> <input
-									id="emailsignup" name="emailsignup" required="required"
-									type="email" placeholder="mysupermail@mail.com">
+								<label for="emailsignup" class="youmail"> Your email</label> 
+								<input type="email" id="emailsignup" name="emailsignup" placeholder="mysupermail@mail.com">
 							</p>
 							<p>
-								<label for="passwordsignup" class="youpasswd">Your
-									password </label> <input id="passwordsignup" name="passwordsignup"
-									required="required" type="password" placeholder="eg. X8df!90EO">
+								<label for="passwordsignup" class="youpasswd">Your password </label> 
+								<input type="password" id="passwordsignup" name="passwordsignup" placeholder="eg. X8df!90EO">
 							</p>
 							<p>
-								<label for="passwordsignup_confirm" class="youpasswd">Please
-									confirm your password </label> <input id="passwordsignup_confirm"
-									name="passwordsignup_confirm" required="required"
-									type="password" placeholder="eg. X8df!90EO">
+								<label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label> 
+								<input type="password" id="passwordsignup_confirm" name="passwordsignup_confirm" placeholder="eg. X8df!90EO">
 							</p>
 							<p class="signin button">
-								<input type="submit" value="Sign up">
+								<input type="submit" name="submit" value="Sign up">
 							</p>
-							<p class="change_link">
-								Already a member ? <a href="#tologin" class="to_register">
-									Go and log in </a>
+							<p class="change_link">Already a member ? 
+								<a href="#tologin" class="to_register">Go and log in </a>
 							</p>
 						</form>
 					</div>
