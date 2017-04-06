@@ -17,7 +17,8 @@
          /WEB-INF/app/non-validation-form/struts-config.xml,
          /WEB-INF/app/validation-form/struts-config.xml,
          /WEB-INF/app/tile/struts-config.xml,
-         /WEB-INF/app/custom-tag/struts-config.xml
+         /WEB-INF/app/custom-tag/struts-config.xml,
+         /WEB-INF/app/database/struts-config.xml
         </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
