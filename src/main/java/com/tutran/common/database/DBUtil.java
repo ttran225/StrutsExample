@@ -19,7 +19,7 @@ public class DBUtil {
 	public final static String USER = "root";
 	public final static String PASSWORD = "password";
 	public final static String SELECT_DEPARTMENTS = "select * from departments";
-	public final static String SELECT_EMPLOYEES = "select * from employees";
+	public final static String SELECT_EMPLOYEES = "select * from employees limit 700";
 	
 	public static Collection<Department> getDepartments() throws SQLException {
 		Connection con = null;

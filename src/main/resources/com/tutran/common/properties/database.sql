@@ -1,0 +1,2 @@
+selectDepartments=
+	select * from departments

@@ -11,7 +11,7 @@ public class Employee {
 	private final String lastName;
 	private final Date birthDate;
 	private final Gender gender;
-	private final Date bireDate;
+	private final Date hireDate;
 
 	/**
 	 * @param employeeId
@@ -19,16 +19,16 @@ public class Employee {
 	 * @param lastName
 	 * @param birthDate
 	 * @param gender
-	 * @param bireDate
+	 * @param hireDate
 	 */
-	public Employee(int employeeId, String firstName, String lastName, Date birthDate, Gender gender, Date bireDate) {
+	public Employee(int employeeId, String firstName, String lastName, Date birthDate, Gender gender, Date hireDate) {
 		super();
 		this.employeeId = employeeId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthDate = birthDate;
 		this.gender = gender;
-		this.bireDate = bireDate;
+		this.hireDate = hireDate;
 	}
 
 	/**
@@ -67,10 +67,10 @@ public class Employee {
 	}
 
 	/**
-	 * @return the bireDate
+	 * @return the hireDate
 	 */
-	public Date getBireDate() {
-		return bireDate;
+	public Date getHireDate() {
+		return hireDate;
 	}
 
 	/*
@@ -82,7 +82,7 @@ public class Employee {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((bireDate == null) ? 0 : bireDate.hashCode());
+		result = prime * result + ((hireDate == null) ? 0 : hireDate.hashCode());
 		result = prime * result + ((birthDate == null) ? 0 : birthDate.hashCode());
 		result = prime * result + employeeId;
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
@@ -105,10 +105,10 @@ public class Employee {
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		if (bireDate == null) {
-			if (other.bireDate != null)
+		if (hireDate == null) {
+			if (other.hireDate != null)
 				return false;
-		} else if (!bireDate.equals(other.bireDate))
+		} else if (!hireDate.equals(other.hireDate))
 			return false;
 		if (birthDate == null) {
 			if (other.birthDate != null)
@@ -140,7 +140,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", birthDate=" + birthDate + ", gender=" + gender + ", bireDate=" + bireDate + "]";
+				+ ", birthDate=" + birthDate + ", gender=" + gender + ", bireDate=" + hireDate + "]";
 	}
 
 }
