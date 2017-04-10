@@ -7,9 +7,9 @@ jQuery(document).ready(function() {
      "bInfo": true,
      "iDisplayStart":0,
      "bProcessing" : true,
-    "bServerSide" : true,
-    "sAjaxSource" : path+"/com/studywithdemo/JqueryDatatablePluginDemo.java",
-    "dom": 'C<"clear">lfrtip',
+     "bServerSide" : true,
+     "sAjaxSource" : path+"/com/studywithdemo/JqueryDatatablePluginDemo.java",
+     "dom": 'C<"clear">lfrtip',
    colVis: {
     "align": "right",
              restore: "Restore",
@@ -26,22 +26,17 @@ jQuery(document).ready(function() {
        })
      .columnFilter({
       aoColumns: [
-                  { type: "number"},
+               { type: "number"},
                { type: "text" },
                { type: "text" },
+               { type: "date" },
                { type: "text" },
-                           { type: "text" },
-                           { type: "text" },
+               { type: "date" },
        ],
       bUseColVis: true
       }).fnSetFilteringDelay();
    $("#personTable_length").hide();
-   $("div.toolbar").append('<div class="btn-group" style="padding:5px "><button 
-class="btn btn-default" id="refreshbtn" style="background:none;border:1px 
-solid #ccc;height:30px" 
-type="button"><span class="glyphicon glyphicon-refresh" style="padding:3px">
-</span></button>
-</div>');
+   $("div.toolbar").append('<div class="btn-group" style="padding:5px "><button class="btn btn-default" id="refreshbtn" style="background:none;border:1px solid #ccc;height:30px" type="button"><span class="glyphicon glyphicon-refresh" style="padding:3px"></span></button></div>');
       $("div.toolbar").css("float","right");
       $('#refreshbtn').click(function(){
        table.fnStandingRedraw();

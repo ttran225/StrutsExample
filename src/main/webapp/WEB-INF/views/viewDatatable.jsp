@@ -5,26 +5,18 @@
  var path = '${pageContext.request.contextPath}';
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap
-/3.2.0/css/bootstrap.min.css">
-<link href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet"
- type="text/css">
-<link href="http://datatables.net/release-datatables/extensions/ColVis/
-css/dataTables.colVis.css" 
-rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+<link href="http://datatables.net/release-datatables/extensions/ColVis/css/dataTables.colVis.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
-<script src="http://datatables.net/release-datatables/extensions/ColVis/js/
-dataTables.colVis.js"
-></script>
-<script src="http://jquery-datatables-column-filter.googlecode.com/svn/trunk/media/
-js/jquery.dataTables.columnFilter.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/
-assets/js/custom-datatable.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/
-assets/plugin/fnStandingRedraw.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/
-assets/plugin/fnSetFilteringDelay.js"></script>
+<script src="http://datatables.net/release-datatables/extensions/ColVis/js/dataTables.colVis.js"></script>
+<script src="http://jquery-datatables-column-filter.googlecode.com/svn/trunk/media/js/jquery.dataTables.columnFilter.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.13/api/fnSetFilteringDelay.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.13/api/fnStandingRedraw.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/custom-datatable.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugin/fnStandingRedraw.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugin/fnSetFilteringDelay.js"></script>
 <title>Person Form</title>
 </head>
 <body>
@@ -34,24 +26,14 @@ assets/plugin/fnSetFilteringDelay.js"></script>
    class="row-border tableHeader" id="personTable">
    <thead>
     <tr>
-        <th>Id</th>
-     <th>Name</th>
-     <th>Place</th>
-     <th>City</th>
-     <th>State</th>
-     <th>Phone</th>
+       	 <th>Employee No</th>
+	     <th>First Name</th>
+	     <th>Last Name</th>
+	     <th>Birth Date</th>
+	     <th>Gender</th>
+	     <th>Hire Date</th>
     </tr>
    </thead>
-   <tfoot>
-     <tr>
-     <th>Id</th>
-     <th>Name</th>
-     <th>Place</th>
-     <th>City</th>
-     <th>State</th>
-     <th>Phone</th>
-    </tr>
-     </tfoot>
    <tbody>
    </tbody>
   </table>

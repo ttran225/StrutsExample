@@ -14,13 +14,12 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
  private String DIRECTION;
  private int INITIAL;
  private int RECORD_SIZE;
- private String ID_SEARCH_TERM,NAME_SEARCH_TERM,PLACE_SEARCH_TERM,CITY_SEARCH_TERM,
- STATE_SEARCH_TERM,PHONE_SEARCH_TERM;
+ private String EMPNO_SEARCH_TERM, FIRSTNAME_SEARCH_TERM, LASTNAME_SEARCH_TERM, BIRTHDATE_SEARCH_TERM, GENDER_SEARCH_TERM, HIREDATE_SEARCH_TERM;
 
  public void doGet(HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException {
 
-  String[] columnNames = { "id", "name", "place", "city", "state","phone" };
+  String[] columnNames = { "emp_no", "first_name", "last_name", "birth_date", "gender", "hire_date" };
 
   JSONObject jsonResult = new JSONObject();
   int listDisplayAmount = 10;
@@ -64,12 +63,12 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
 
   RECORD_SIZE = listDisplayAmount;
   GLOBAL_SEARCH_TERM = request.getParameter("sSearch");
-  ID_SEARCH_TERM=request.getParameter("sSearch_0");
-  NAME_SEARCH_TERM=request.getParameter("sSearch_1");
-  PLACE_SEARCH_TERM=request.getParameter("sSearch_2");
-  CITY_SEARCH_TERM=request.getParameter("sSearch_3");
-  STATE_SEARCH_TERM=request.getParameter("sSearch_4");
-  PHONE_SEARCH_TERM=request.getParameter("sSearch_5");
+  EMPNO_SEARCH_TERM=request.getParameter("sSearch_0");
+  FIRSTNAME_SEARCH_TERM=request.getParameter("sSearch_1");
+  LASTNAME_SEARCH_TERM=request.getParameter("sSearch_2");
+  BIRTHDATE_SEARCH_TERM=request.getParameter("sSearch_3");
+  GENDER_SEARCH_TERM=request.getParameter("sSearch_4");
+  HIREDATE_SEARCH_TERM=request.getParameter("sSearch_5");
   COLUMN_NAME = colName;
   DIRECTION = dir;
   INITIAL = start;
@@ -102,51 +101,51 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
   } catch (ClassNotFoundException e) {
    e.printStackTrace();
   }
-  String dbConnectionURL = "jdbc:mysql://localhost:3306/faruk?user=root&password=password";
+  String dbConnectionURL = "jdbc:mysql://localhost:3306/employees?user=root&password=password";
   Connection con = DriverManager.getConnection(dbConnectionURL);
-  String sql = "SELECT " + "id, name, place, city, state, "
-    + "phone " + "FROM " + "person " + "WHERE ";
+  String sql = "SELECT " + "emp_no, first_name, last_name, birth_date, gender, "
+    + "hire_date " + "FROM " + "employees " + "WHERE ";
 
-  String globeSearch = "id like '%" + GLOBAL_SEARCH_TERM + "%'"
-    + "or name like '%" + GLOBAL_SEARCH_TERM + "%'"
-    + "or place like '%" + GLOBAL_SEARCH_TERM + "%'"
-    + "or city like '%" + GLOBAL_SEARCH_TERM + "%'"
-    + "or state like  '%" + GLOBAL_SEARCH_TERM + "%'"
-    + "or phone like '%" + GLOBAL_SEARCH_TERM + "%'";
+  String globeSearch = "emp_no like '%" + GLOBAL_SEARCH_TERM + "%'"
+    + "or first_name like '%" + GLOBAL_SEARCH_TERM + "%'"
+    + "or last_name like '%" + GLOBAL_SEARCH_TERM + "%'"
+    + "or birth_date like '%" + GLOBAL_SEARCH_TERM + "%'"
+    + "or gender like  '%" + GLOBAL_SEARCH_TERM + "%'"
+    + "or hire_date like '%" + GLOBAL_SEARCH_TERM + "%'";
   
-  String idSearch="id like " + ID_SEARCH_TERM + "";
-  String nameSearch="name like '%" + NAME_SEARCH_TERM + "%'";
-  String placeSearch=" place like '%" + PLACE_SEARCH_TERM + "%'";
-  String citySearch=" city like '%" + CITY_SEARCH_TERM + "%'";
-  String stateSearch=" state like '%" + STATE_SEARCH_TERM + "%'"; 
-  String phoneSearch=" phone like '%" + PHONE_SEARCH_TERM + "%'";
-        System.out.println(phoneSearch);
+  String empNoSearch="emp_no like " + EMPNO_SEARCH_TERM + "";
+  String firstNameSearch="first_name like '%" + FIRSTNAME_SEARCH_TERM + "%'";
+  String lastNameSearch=" last_name like '%" + LASTNAME_SEARCH_TERM + "%'";
+  String birthDateSearch=" birth_date like '%" + BIRTHDATE_SEARCH_TERM + "%'";
+  String genderSearch=" gender like '%" + GENDER_SEARCH_TERM + "%'"; 
+  String hireDate=" hire_date like '%" + HIREDATE_SEARCH_TERM + "%'";
+        System.out.println(hireDate);
   if (GLOBAL_SEARCH_TERM != "") {
    searchSQL = globeSearch;
   }
-  else if(ID_SEARCH_TERM !="")
+  else if(EMPNO_SEARCH_TERM !="")
   {
-   searchSQL=idSearch;
+   searchSQL=empNoSearch;
   }
-  else if(NAME_SEARCH_TERM !="")
+  else if(FIRSTNAME_SEARCH_TERM !="")
   {
-   searchSQL=nameSearch;
+   searchSQL=firstNameSearch;
   }
-  else if(PLACE_SEARCH_TERM!="")
+  else if(LASTNAME_SEARCH_TERM!="")
   {
-   searchSQL=placeSearch;
+   searchSQL=lastNameSearch;
   }
-  else if(CITY_SEARCH_TERM!="")
+  else if(BIRTHDATE_SEARCH_TERM!="")
   {
-   searchSQL=citySearch;
+   searchSQL=birthDateSearch;
   }
-  else if(STATE_SEARCH_TERM!="")
+  else if(GENDER_SEARCH_TERM!="")
   {
-   searchSQL=stateSearch;
+   searchSQL=genderSearch;
   }
-  else if(PHONE_SEARCH_TERM!=null)
+  else if(HIREDATE_SEARCH_TERM!=null)
   {
-   searchSQL=phoneSearch;
+   searchSQL=hireDate;
    
   }
      
@@ -160,23 +159,23 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
 
   while (rs.next()) {
    JSONArray ja = new JSONArray();
-   ja.put(rs.getString("id"));
-   ja.put(rs.getString("name"));
-   ja.put(rs.getString("place"));
-   ja.put(rs.getString("city"));
-   ja.put(rs.getString("state"));
-   ja.put(rs.getString("phone"));
+   ja.put(rs.getString("emp_no"));
+   ja.put(rs.getString("first_name"));
+   ja.put(rs.getString("last_name"));
+   ja.put(rs.getString("birth_date"));
+   ja.put(rs.getString("gender"));
+   ja.put(rs.getString("hire_date"));
    array.put(ja); 
   }
   stmt.close();
   rs.close();
 
-  String query = "SELECT " + "COUNT(*) as count " + "FROM " + "person " + "WHERE ";
+  String query = "SELECT " + "COUNT(*) as count " + "FROM " + "employees " + "WHERE ";
 
   //for pagination
-  if (GLOBAL_SEARCH_TERM != ""||ID_SEARCH_TERM != "" || NAME_SEARCH_TERM != "" 
-||PLACE_SEARCH_TERM != ""||CITY_SEARCH_TERM != ""|| STATE_SEARCH_TERM != "" 
-|| PHONE_SEARCH_TERM != "" ) {
+  if (GLOBAL_SEARCH_TERM != ""||EMPNO_SEARCH_TERM != "" || FIRSTNAME_SEARCH_TERM != "" 
+||LASTNAME_SEARCH_TERM != ""||BIRTHDATE_SEARCH_TERM != ""|| GENDER_SEARCH_TERM != "" 
+|| HIREDATE_SEARCH_TERM != "" ) {
    query += searchSQL;
 
    
@@ -204,8 +203,8 @@ public class JqueryDatatablePluginDemo extends HttpServlet {
  public int getTotalRecordCount() throws SQLException {
 
   int totalRecords = -1;
-  String sql = "SELECT " + "COUNT(*) as count " + "FROM " + "person";
-        String dbConnectionURL = "jdbc:mysql://localhost:3306/myDB?user=root&password=root";
+  String sql = "SELECT " + "COUNT(*) as count " + "FROM " + "employees";
+        String dbConnectionURL = "jdbc:mysql://localhost:3306/employees?user=root&password=password";
   try {
    Class.forName("com.mysql.jdbc.Driver");
   } catch (ClassNotFoundException e) {
