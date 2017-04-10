@@ -7,6 +7,16 @@
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
+    <servlet-name>JqueryDatatablePluginDemo</servlet-name>
+    <servlet-class>com.studywithdemo.JqueryDatatablePluginDemo</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>JqueryDatatablePluginDemo</servlet-name>
+    <url-pattern>/com/studywithdemo/JqueryDatatablePluginDemo.java</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>
         org.apache.struts.action.ActionServlet
@@ -37,6 +47,6 @@
   </jsp-config>
   
   <welcome-file-list>
-  	<welcome-file>index.html</welcome-file>
+  	<welcome-file>/WEB-INF/views/viewDatatable.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
