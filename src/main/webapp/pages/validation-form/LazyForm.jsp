@@ -23,7 +23,7 @@
 		<h1 class="well">Registration Form</h1>
 		<div class="col-lg-12 well">
 			<div class="row">
-				<form id="lazyFormForm" method="post" action="SubmitLazyForm.do">
+				<form id="lazyFormForm" method="post" action="validationform/SubmitLazyForm.do">
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-6 form-group">

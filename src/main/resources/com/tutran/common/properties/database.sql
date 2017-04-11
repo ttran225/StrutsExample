@@ -1,2 +1,0 @@
-selectDepartments=
-	select * from departments

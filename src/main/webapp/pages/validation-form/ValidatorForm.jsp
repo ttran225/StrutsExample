@@ -55,7 +55,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: block;">
+								<form id="login-form" action="validationform/SubmitValidatorForm.do" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
 										<c:if test="${!empty active && active == 'LOGIN'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>
@@ -85,7 +85,7 @@
 									</div>
 									<input type="hidden" name="action" class="action">
 								</form>
-								<form id="register-form" action="SubmitValidatorForm.do" method="post" role="form" style="display: none;">
+								<form id="register-form" action="validationform/SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>

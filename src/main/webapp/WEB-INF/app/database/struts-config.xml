@@ -6,17 +6,15 @@
 <struts-config>
 
 	<action-mappings>
-		<action path="/ViewDepartments" 
-				type="com.tutran.common.action.ViewDepartmentsAction">
+		<action path="database/ViewDepartments" 
+				type="com.tutran.action.database.ViewDepartmentsAction">
 			<forward name="success" path="/pages/database/Departments.jsp"/>
 	   </action>
 	   
-	   <action path="/ViewEmployees" 
-				type="com.tutran.common.action.ViewEmployeesAction">
+	   <action path="database/ViewEmployees" 
+				type="com.tutran.action.database.ViewEmployeesAction">
 			<forward name="success" path="/pages/database/Employees.jsp"/>
 	   </action>
 	</action-mappings>
-	
-	<message-resources parameter="com.tutran.common.properties.database" />
 	
 </struts-config>

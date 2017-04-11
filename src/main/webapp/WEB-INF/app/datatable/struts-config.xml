@@ -6,9 +6,9 @@
 <struts-config>
 
 	<action-mappings>
-		<action path="customtag/ViewCustomTag" 
-				type="com.tutran.action.customtag.ViewCustomTagAction">
-			<forward name="success" path="/pages/custom-tag/CustomTag.jsp"/>
+		<action path="/datatable/ViewDepartments"
+				type="com.tutran.action.datatable.ViewDepartmentsAction">
+			<forward name="success" path="/pages/datatable/Departments.jsp"/>
 	   </action>
 	</action-mappings>
 	

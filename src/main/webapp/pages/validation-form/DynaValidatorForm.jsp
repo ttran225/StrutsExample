@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div id="dynaValidatorForm" class="container">
-		<form id="dynaValidatorFormForm" class="form-horizontal" role="form" method="post" action="SubmitDynaValidatorForm.do">
+		<form id="dynaValidatorFormForm" class="form-horizontal" role="form" method="post" action="validationform/SubmitDynaValidatorForm.do">
 			<h2>Registration Form</h2>
 			<div class="form-group">
 				<label for="fullName" class="col-sm-3 control-label">Full Name</label>

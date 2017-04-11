@@ -6,7 +6,7 @@
 <struts-config>
 
 	<form-beans>
-		<form-bean name="ActionForm" type="com.tutran.common.form.MyActionForm"/>
+		<form-bean name="ActionForm" type="com.tutran.form.nonvalidationform.MyActionForm"/>
 			
 		<form-bean name="DynaActionForm" type="org.apache.struts.action.DynaActionForm">
 			<form-property name="username" type="java.lang.String"></form-property>
@@ -15,27 +15,27 @@
 	</form-beans>
 
 	<action-mappings>
-		<action path="/ViewActionForm" 
-				type="com.tutran.common.action.ViewActionFormAction"
+		<action path="nonvalidationform/ViewActionForm" 
+				type="com.tutran.action.nonvalidationform.ViewActionFormAction"
 				name="ActionForm">
 			<forward name="success" path="/pages/non-validation-form/ActionForm.jsp"/>
 	   </action>
 	   
-	   <action path="/SubmitActionForm"
-				type="com.tutran.common.action.SubmitActionFormAction"
+	   <action path="nonvalidationform/SubmitActionForm"
+				type="com.tutran.action.nonvalidationform.SubmitActionFormAction"
 				name="ActionForm">
-			<forward name="success" path="/ViewActionForm.do" />
+			<forward name="success" path="nonvalidationform/ViewActionForm.do" />
 		</action>
 		
-		<action path="/ViewDynaActionForm" 
-				type="com.tutran.common.action.ViewDynaActionFormAction">
+		<action path="nonvalidationform/ViewDynaActionForm" 
+				type="com.tutran.action.nonvalidationform.ViewDynaActionFormAction">
 			<forward name="success" path="/pages/non-validation-form/DynaActionForm.jsp"/>
 	   </action>
 	   
-	   <action path="/SubmitDynaActionForm"
-				type="com.tutran.common.action.SubmitDynaActionFormAction"
+	   <action path="nonvalidationform/SubmitDynaActionForm"
+				type="com.tutran.action.nonvalidationform.SubmitDynaActionFormAction"
 				name="DynaActionForm">
-			<forward name="success" path="/ViewDynaActionForm.do" />
+			<forward name="success" path="nonvalidationform/ViewDynaActionForm.do" />
 		</action>
 	</action-mappings>
 	

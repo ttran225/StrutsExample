@@ -28,7 +28,8 @@
          /WEB-INF/app/validation-form/struts-config.xml,
          /WEB-INF/app/tile/struts-config.xml,
          /WEB-INF/app/custom-tag/struts-config.xml,
-         /WEB-INF/app/database/struts-config.xml
+         /WEB-INF/app/database/struts-config.xml,
+         /WEB-INF/app/datatable/struts-config.xml
         </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
@@ -47,6 +48,6 @@
   </jsp-config>
   
   <welcome-file-list>
-  	<welcome-file>/WEB-INF/views/viewDatatable.jsp</welcome-file>
+  	<welcome-file>index.html</welcome-file>
   </welcome-file-list>
 </web-app>
