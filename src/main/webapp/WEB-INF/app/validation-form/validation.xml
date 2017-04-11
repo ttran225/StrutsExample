@@ -104,6 +104,48 @@
 			<field property="fullName" depends="required">
 				<msg name="required" key="dynaactionform.error.fullName.required" />
 			</field>
+			<field property="email" depends="required,email">
+				<msg name="required" key="dynaactionform.error.email.required" />
+				<msg name="email" key="dynaactionform.error.email.invalid" />
+			</field>
+			<field property="password" depends="required,maxlength,minlength,mask">
+				<msg name="required" key="dynaactionform.error.password.required" />
+				<msg name="maxlength" key="dynaactionform.error.password.length" />
+				<msg name="minlength" key="dynaactionform.error.password.length" />
+				<msg name="mask" key="dynaactionform.error.password.invalid" />
+				<arg name="maxlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="maxlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<arg name="minlength" key="${var:minlength}" position="0"
+					resource="false" />
+				<arg name="minlength" key="${var:maxlength}" position="1"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>7</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]*$</var-value>
+				</var>
+			</field>
+			<field property="birthDate" depends="required">
+				<msg name="required" key="dynaactionform.error.birthDate.required" />
+			</field>
+			<field property="country" depends="required">
+				<msg name="required" key="dynaactionform.error.country.required" />
+			</field>
+			<field property="gender" depends="required">
+				<msg name="required" key="dynaactionform.error.gender.required" />
+			</field>
+			<field property="mealPreference" depends="required">
+				<msg name="required" key="dynaactionform.error.mealPreference.required" />
+			</field>
 		</form>
 
 		<form name="LazyForm">

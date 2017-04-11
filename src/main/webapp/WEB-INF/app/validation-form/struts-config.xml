@@ -14,8 +14,8 @@
 			<form-property name="password" type="java.lang.String"></form-property>
 			<form-property name="birthDate" type="java.lang.String"></form-property>
 			<form-property name="country" type="java.lang.String[]"></form-property>
-			<form-property name="gender" type="java.lang.Boolean"></form-property>
-			<form-property name="mealPreference" type="java.lang.Boolean"></form-property>
+			<form-property name="gender" type="java.lang.String"></form-property>
+			<form-property name="mealPreference" type="java.lang.String[]"></form-property>
 			<form-property name="accept" type="java.lang.Boolean"></form-property>
 		</form-bean>
 
