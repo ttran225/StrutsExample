@@ -6,7 +6,7 @@
 <struts-config>
 
 	<action-mappings>
-		<action path="customtag/ViewCustomTag" 
+		<action path="/customtag/ViewCustomTag" 
 				type="com.tutran.action.customtag.ViewCustomTagAction">
 			<forward name="success" path="/pages/custom-tag/CustomTag.jsp"/>
 	   </action>

@@ -4529,7 +4529,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 					id="tologin"></a>
 				<div id="wrapper">
 					<div id="login" class="animate form">
-						<form method="post" action="SubmitDynaActionForm.do" autocomplete="on">
+						<form method="post" action="/StrutsExample/nonvalidationform/SubmitDynaActionForm.do" autocomplete="on">
 							<h1>Log in</h1>
 							<p>
 								<label for="username" class="uname"> Your email or username </label> 

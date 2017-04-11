@@ -6,13 +6,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ValidatorForm</title>
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapApplication.css">
-<link rel="stylesheet" type="text/css" href="css/styleApplication.css">
-<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/validation/validatorForm.js"></script>
-<script type="text/javascript" src="js/validation/validatorFormValidation.js"></script>
+<link rel="stylesheet" type="text/css" href="webapp/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="webapp/bootstrap/css/bootstrapApplication.css">
+<link rel="stylesheet" type="text/css" href="webapp/css/styleApplication.css">
+<script type="text/javascript" src="webapp/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="webapp/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="webapp/js/validation/validatorForm.js"></script>
+<script type="text/javascript" src="webapp/js/validation/validatorFormValidation.js"></script>
 <style type="text/css">
 	body {
 		padding-top: 90px;
@@ -55,7 +55,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="validationform/SubmitValidatorForm.do" method="post" role="form" style="display: block;">
+								<form id="login-form" action="/StrutsExample/validationform/SubmitValidatorForm.do" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username">
 										<c:if test="${!empty active && active == 'LOGIN'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>
@@ -85,7 +85,7 @@
 									</div>
 									<input type="hidden" name="action" class="action">
 								</form>
-								<form id="register-form" action="validationform/SubmitValidatorForm.do" method="post" role="form" style="display: none;">
+								<form id="register-form" action="/StrutsExample/validationform/SubmitValidatorForm.do" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 										<c:if test="${!empty active && active == 'REGISTER'}"><label class="error-required-fields"><html:errors property="username"/></label></c:if>

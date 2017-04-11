@@ -15,27 +15,27 @@
 	</form-beans>
 
 	<action-mappings>
-		<action path="nonvalidationform/ViewActionForm" 
+		<action path="/nonvalidationform/ViewActionForm" 
 				type="com.tutran.action.nonvalidationform.ViewActionFormAction"
 				name="ActionForm">
 			<forward name="success" path="/pages/non-validation-form/ActionForm.jsp"/>
 	   </action>
 	   
-	   <action path="nonvalidationform/SubmitActionForm"
+	   <action path="/nonvalidationform/SubmitActionForm"
 				type="com.tutran.action.nonvalidationform.SubmitActionFormAction"
 				name="ActionForm">
-			<forward name="success" path="nonvalidationform/ViewActionForm.do" />
+			<forward name="success" path="/nonvalidationform/ViewActionForm.do" />
 		</action>
 		
-		<action path="nonvalidationform/ViewDynaActionForm" 
+		<action path="/nonvalidationform/ViewDynaActionForm" 
 				type="com.tutran.action.nonvalidationform.ViewDynaActionFormAction">
 			<forward name="success" path="/pages/non-validation-form/DynaActionForm.jsp"/>
 	   </action>
 	   
-	   <action path="nonvalidationform/SubmitDynaActionForm"
+	   <action path="/nonvalidationform/SubmitDynaActionForm"
 				type="com.tutran.action.nonvalidationform.SubmitDynaActionFormAction"
 				name="DynaActionForm">
-			<forward name="success" path="nonvalidationform/ViewDynaActionForm.do" />
+			<forward name="success" path="/nonvalidationform/ViewDynaActionForm.do" />
 		</action>
 	</action-mappings>
 	

@@ -6,12 +6,12 @@
 <struts-config>
 
 	<action-mappings>
-		<action path="database/ViewDepartments" 
+		<action path="/database/ViewDepartments" 
 				type="com.tutran.action.database.ViewDepartmentsAction">
 			<forward name="success" path="/pages/database/Departments.jsp"/>
 	   </action>
 	   
-	   <action path="database/ViewEmployees" 
+	   <action path="/database/ViewEmployees" 
 				type="com.tutran.action.database.ViewEmployeesAction">
 			<forward name="success" path="/pages/database/Employees.jsp"/>
 	   </action>
