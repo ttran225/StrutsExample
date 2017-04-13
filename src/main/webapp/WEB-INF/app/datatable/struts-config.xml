@@ -10,6 +10,11 @@
 				type="com.tutran.action.datatable.ViewDepartmentsAction">
 			<forward name="success" path="/pages/datatable/Departments.jsp"/>
 	   </action>
+	   
+	   <action path="/datatable/ViewEmployees"
+				type="com.tutran.action.datatable.ViewEmployeesAction">
+			<forward name="success" path="/pages/datatable/Employees.jsp"/>
+	   </action>
 	</action-mappings>
 	
 </struts-config>
