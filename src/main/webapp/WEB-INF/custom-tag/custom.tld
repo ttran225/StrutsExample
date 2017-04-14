@@ -4,7 +4,7 @@
   <short-name>Example TLD</short-name>
   <tag>
     <name>Hello</name>
-    <tag-class>com.tutran.common.customtag.HelloTag</tag-class>
+    <tag-class>com.tutran.action.customtag.HelloTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 </taglib>
