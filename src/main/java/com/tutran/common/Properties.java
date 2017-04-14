@@ -1,4 +1,4 @@
-package com.tutran.common.util;
+package com.tutran.common;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -40,7 +40,7 @@ public abstract class Properties {
    *
    * @return instance of SQLProperties
    */
-  protected static Properties getInstance(String fileName) {
+  public static Properties getInstance(String fileName) {
     Properties instance = (Properties) cache.get(fileName);
     if (instance == null) {
       instance = PropertiesFactory.getProperties(fileName);
@@ -68,7 +68,7 @@ public abstract class Properties {
    * @param key of statement
    * @return sql statement, null if not found
    */
-  protected abstract String getStatement(String key);
+  public abstract String getStatement(String key);
   
   /**
    * Load a property
@@ -76,7 +76,7 @@ public abstract class Properties {
    * @param key of property
    * @return property, null if not found
    */
-  protected abstract String loadProperty(String key);
+  public abstract String loadProperty(String key);
 
   /**
    * Get a statement

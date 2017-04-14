@@ -10,8 +10,8 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.tutran.action.common.BaseAction;
+import com.tutran.common.model.Employee;
 import com.tutran.common.util.DBUtil;
-import com.tutran.common.util.Employee;
 
 public class ViewEmployeesAction extends BaseAction {
 	

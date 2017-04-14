@@ -1,4 +1,4 @@
-package com.tutran.common.util;
+package com.tutran.common;
 
 import java.util.NoSuchElementException;
 
@@ -10,7 +10,7 @@ public class ReadProperties extends Properties {
 	}
 	
 	@Override
-	protected String loadProperty(String key) {
+	public String loadProperty(String key) {
 		watchdog();
 	    String val = (String) props.get(key);
 	    if (val == null) {
@@ -20,7 +20,7 @@ public class ReadProperties extends Properties {
 	}
 
 	@Override
-	protected String getStatement(String key) {
+	public String getStatement(String key) {
 		return null;
 	}
 }

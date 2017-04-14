@@ -11,8 +11,8 @@ import org.apache.struts.action.ActionMapping;
 import org.json.JSONArray;
 
 import com.tutran.action.common.BaseAction;
+import com.tutran.common.model.Department;
 import com.tutran.common.util.DBUtil;
-import com.tutran.common.util.Department;
 
 public class ViewDepartmentsAction extends BaseAction {
 	

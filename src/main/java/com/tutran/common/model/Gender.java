@@ -1,4 +1,4 @@
-package com.tutran.common.util;
+package com.tutran.common.model;
 
 public enum Gender {
 	M,

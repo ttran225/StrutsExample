@@ -1,8 +1,8 @@
 package com.tutran.pattern;
 
-import com.tutran.common.util.Properties;
-import com.tutran.common.util.ReadProperties;
-import com.tutran.common.util.SQLProperties;
+import com.tutran.common.Properties;
+import com.tutran.common.ReadProperties;
+import com.tutran.common.SQLProperties;
 
 public class PropertiesFactory {
 	

@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
+import com.tutran.common.Properties;
+import com.tutran.common.model.Department;
+import com.tutran.common.model.Employee;
+import com.tutran.common.model.Gender;
+
 public class DBUtil {
 	
 	// Use factory pattern

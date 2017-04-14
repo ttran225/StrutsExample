@@ -1,4 +1,4 @@
-package com.tutran.action.common;
+package com.tutran.jsonaction.common;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,6 +7,8 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.json.JSONObject;
+
+import com.tutran.action.common.BaseAction;
 
 /**
  * Base web action for action which return JSON actions
