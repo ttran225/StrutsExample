@@ -2,15 +2,15 @@ package com.tutran.common.util;
 
 import java.util.NoSuchElementException;
 
-public class SQLProperties extends Properties {
-	private static final String PATH_PREFIX = "sql";
-	
-	public SQLProperties(String fileName) {
+public class ReadProperties extends Properties {
+	private static final String PATH_PREFIX = "prop";
+
+	public ReadProperties(String fileName) {
 		super(PATH_PREFIX, fileName);
 	}
-
+	
 	@Override
-	protected String getStatement(String key) {
+	protected String loadProperty(String key) {
 		watchdog();
 	    String val = (String) props.get(key);
 	    if (val == null) {
@@ -20,7 +20,7 @@ public class SQLProperties extends Properties {
 	}
 
 	@Override
-	protected String loadProperty(String key) {
+	protected String getStatement(String key) {
 		return null;
 	}
 }
