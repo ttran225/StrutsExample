@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DynaValidatorForm</title>
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrapApplication.css">
-<link rel="stylesheet" type="text/css" href="../css/styleApplication.css">
-<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
-<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../js/validation/dynaValidatorForm.js"></script>
-<!-- <script type="text/javascript" src="../js/validation/dynaValidatorFormValidation.js"></script> -->
+<link rel="stylesheet" type="text/css" href="../static/scripts/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/scripts/bootstrap/css/bootstrapApplication.css">
+<link rel="stylesheet" type="text/css" href="../static/css/styleApplication.css">
+<script type="text/javascript" src="../static/scripts/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../static/scripts/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../static/scripts/js/validation/dynaValidatorForm.js"></script>
+<!-- <script type="text/javascript" src="../static/scripts/js/validation/dynaValidatorFormValidation.js"></script> -->
 <style type="text/css">
 	body {
 		background-color: #294765;
